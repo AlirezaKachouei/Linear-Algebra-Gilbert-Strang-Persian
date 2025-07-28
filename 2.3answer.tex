@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+\setmathdigitfont{XB Niloofar}
+
+
+\begin{document}
+	
+	
+	\begin{enumerate}
+		
+		\item $E_{21}=
+		\begin{bmatrix}
+			1 & 0 & 0 \\
+			-5 & 1 & 0 \\
+			0 & 0 & 1
+		\end{bmatrix} ,E_{32}=
+		\begin{bmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 0 \\
+			0 & 7 & 1
+		\end{bmatrix} ,P=
+		\begin{bmatrix}
+			1 & 0 & 0 \\
+			0 & 0 & 1 \\
+			0 & 1 & 0
+		\end{bmatrix}
+		\begin{bmatrix}
+			0 & 1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 1
+		\end{bmatrix}=
+		\begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			1 & 0 & 0
+		\end{bmatrix}$.
+		
+		\item $E_{32}E_{21}b=(1,-5,-35)$ اما $E_{21}E_{32}b=(1,-5,0)$. وقتی $E_{32}$ اول می‌آید، سطر ۳ هیچ تأثیری از سطر ۱ نمی‌پذیرد.
+		
+		\item $\begin{bmatrix} 1 & 0 & 0 \\ -4 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 2 & 0 & 1 \end{bmatrix}, \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & -2 & 1 \end{bmatrix}, M=E_{32}E_{31}E_{21} = \begin{bmatrix} 1 & 0 & 0 \\ -4 & 1 & 0 \\ 10 & -2 & 1 \end{bmatrix}$. این ماتریس‌های E به ترتیب درستی هستند تا $MA=U$ را نتیجه دهند.
+		
+		\item حذف روی ستون ۴: $b= \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \xrightarrow{E_{21}} \begin{bmatrix} 1 \\ -4 \\ 0 \end{bmatrix} \xrightarrow{E_{31}} \begin{bmatrix} 1 \\ -4 \\ 2 \end{bmatrix} \xrightarrow{E_{32}} \begin{bmatrix} 1 \\ -4 \\ 10 \end{bmatrix}$. معادله اصلی $Ax=b$ به $Ux=c=(1,-4,10)$ تبدیل شده است. سپس جایگزینی معکوس نتیجه می‌دهد $z=-5, y=\frac{1}{2}, x=\frac{1}{2}$. این جواب معادله $Ax=(1,0,0)$ است.
+		
+		\item تغییر $a_{33}$ از ۷ به ۱۱، محور سوم را از ۵ به ۹ تغییر می‌دهد. تغییر $a_{33}$ از ۷ به ۲، محور را از ۵ به بدون محور تغییر می‌دهد.
+		
+		\item مثال: $\begin{bmatrix} 2 & 3 & 7 \\ 2 & 3 & 7 \\ 2 & 3 & 7 \end{bmatrix} \begin{bmatrix} 1 \\ 3 \\ -1 \end{bmatrix} = \begin{bmatrix} 4 \\ 4 \\ 4 \end{bmatrix}$. اگر همه ستون‌ها مضربی از ستون ۱ باشند، محور دومی وجود ندارد.
+		
+		\item برای معکوس کردن $E_{31}$، ۷ برابر سطر ۱ را به سطر ۳ اضافه کنید. معکوس ماتریس حذف $E= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ -7 & 0 & 1 \end{bmatrix}$ برابر است با $E^{-1}= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 7 & 0 & 1 \end{bmatrix}$. ضرب $EE^{-1}=I$ این موضوع را تأیید می‌کند.
+		
+		\item $M= \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ و $M^*= \begin{bmatrix} a & b \\ c-ℓa & d-ℓb \end{bmatrix}$. دترمینان $M^*$ یعنی $a(d-ℓb)-b(c-ℓa)$ به $ad-bc$ کاهش می‌یابد! کم کردن سطر ۱ از سطر ۲ دترمینان $M$ را تغییر نمی‌دهد.
+		
+		\item $M= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ -1 & 1 & 0 \end{bmatrix}$. پس از تعویض، نیاز داریم $E_{31}$ (و نه $E_{21}$) روی سطر ۳ جدید عمل کند.
+		
+		\item $E_{13}= \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$; $\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 1 \end{bmatrix}$; $E_{31}E_{13}= \begin{bmatrix} 2 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 1 \end{bmatrix}$. روی ماتریس همانی امتحان کنید!
+		
+		\item یک مثال با دو محور منفی $A= \begin{bmatrix} 1 & 2 & 2 \\ 1 & 1 & 2 \\ 1 & 2 & 1 \end{bmatrix}$ است. درایه‌های قطری می‌توانند در طول حذف علامت عوض کنند.
+		
+		\item حاصل‌ضرب اول $\begin{bmatrix} 9 & 8 & 7 \\ 6 & 5 & 4 \\ 3 & 2 & 1 \end{bmatrix}$ است که سطرها و همچنین ستون‌ها معکوس شده‌اند. حاصل‌ضرب دوم $\begin{bmatrix} 1 & 2 & 3 \\ 0 & 1 & -2 \\ 0 & 2 & -3 \end{bmatrix}$ است.
+		
+		\item (الف) حاصل‌ضرب E در ستون سوم B، ستون سوم EB است. ستونی که با صفر شروع می‌شود، صفر باقی می‌ماند. (ب) E می‌تواند سطر ۲ را به سطر ۳ اضافه کند تا یک سطر صفر را به یک سطر غیرصفر تغییر دهد.
+		
+		\item $E_{21}$ دارای $-ℓ_{21}=\frac{1}{2}$، $E_{32}$ دارای $-ℓ_{32}=\frac{2}{3}$ و $E_{43}$ دارای $-ℓ_{43}=\frac{3}{4}$ است. در غیر این صورت، ماتریس‌های E با I مطابقت دارند.
+		
+		\item $a_{ij}=2i−3j$: $A= \begin{bmatrix} -1 & -4 & -7 \\ 1 & -2 & -5 \\ 3 & 0 & -3 \end{bmatrix} \to \begin{bmatrix} -1 & -4 & -7 \\ 0 & -6 & -12 \\ 0 & -12 & -24 \end{bmatrix}$. صفر به ۱۲- تبدیل شد که مثالی از «پر شدن» (fill-in) است. برای حذف آن ۱۲-، $E_{32}= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & -2 & 1 \end{bmatrix}$ را انتخاب کنید. هر ماتریس ۳ در ۳ با درایه‌های $a_{ij}=ci+dj$ منفرد است!
+		
+		\item (الف) سن X و Y برابر x و y است: $x−2y=0$ و $x+y=33$؛ $x=22$ و $y=11$. (ب) خط $y=mx+c$ از نقاط $x=2, y=5$ و $x=3, y=7$ می‌گذرد وقتی $2m+c=5$ و $3m+c=7$. آنگاه $m=2$ شیب است.
+		
+		\item سهمی $y=a+bx+cx^2$ از ۳ نقطه داده‌شده می‌گذرد وقتی: \\
+		$a+ b+ c= 4$ \\
+		$a+2b+4c= 8$ \\
+		$a+3b+9c=14$ \\
+		آنگاه $a=2, b=1, c=1$. این ماتریس با ستون‌های $(1,1,1), (1,2,3), (1,4,9)$ یک «ماتریس وندرموند» است.
+		
+		\item $EF= \begin{bmatrix} 1 & 0 & 0 \\ a & 1 & 0 \\ b & c & 1 \end{bmatrix}, FE= \begin{bmatrix} 1 & 0 & 0 \\ a & 1 & 0 \\ b+ac & c & 1 \end{bmatrix}, E^2= \begin{bmatrix} 1 & 0 & 0 \\ 2a & 1 & 0 \\ 2b & 0 & 1 \end{bmatrix}, F^3= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 3c & 1 \end{bmatrix}$.
+		
+		\item $PQ= \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}$. در ترتیب مخالف، دو تعویض سطر $QP= \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}$ را نتیجه می‌دهد، $P^2=I$. اگر M سطرهای ۲ و ۳ را تعویض کند، آنگاه $M^2=I$ (همچنین $(-M)^2=I$). ریشه‌های دوم زیادی برای I وجود دارد: هر ماتریس $M= \begin{bmatrix} a & b \\ c & -a \end{bmatrix}$ دارای $M^2=I$ است اگر $a^2+bc=1$.
+		
+		\item (الف) هر ستون EB برابر است با E ضرب در یک ستون از B. (ب) $\begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 & 4 \\ 1 & 2 & 4 \end{bmatrix}= \begin{bmatrix} 1 & 2 & 4 \\ 2 & 4 & 8 \end{bmatrix}$. تمام سطرهای EB مضربی از `[1 2 4]` هستند.
+		
+		\item خیر. $E= \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}$ و $F= \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ نتیجه می‌دهند $EF= \begin{bmatrix} 1 & 1 \\ 1 & 2 \end{bmatrix}$ اما $FE= \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$.
+		
+		\item (الف) $\sum_j a_{3j}x_j$ (ب) $a_{21}-a_{11}$ (ج) $a_{21}-2a_{11}$ (د) $(EAx)_1=(Ax)_1= \sum_j a_{1j}x_j$.
+		
+		\item $E(EA)$، ۴ برابر سطر ۱ را از سطر ۲ کم می‌کند ($EEA$ این عملیات سطری را دو بار انجام می‌دهد). $AE$، ۲ برابر ستون ۲ ماتریس A را از ستون ۱ کم می‌کند (ضرب از سمت راست در E به جای سطرها روی ستون‌ها عمل می‌کند).
+		
+		\item $A|b = \begin{bmatrix} 2 & 3 & 1 \\ 4 & 1 & 17 \end{bmatrix} \to \begin{bmatrix} 2 & 3 & 1 \\ 0 & -5 & 15 \end{bmatrix}$. سیستم مثلثی عبارت است از: $2x_1+3x_2= 1, -5x_2=15$. جایگزینی معکوس $x_1=5$ و $x_2=-3$ را می‌دهد.
+		
+		\item معادله آخر به $0=3$ تبدیل می‌شود. اگر عدد ۶ اصلی، ۳ بود، آنگاه سطر ۱ + سطر ۲ = سطر ۳. در این صورت معادله آخر $0=0$ می‌شود و سیستم بی‌نهایت جواب دارد.
+		
+		\item (الف) دو ستون $b$ و $b^*$ را اضافه کنید تا `[A b b*]` به دست آید. مثال به صورت زیر است:
+		$\begin{bmatrix} 1 & 4 & 1 & 0 \\ 2 & 7 & 0 & 1 \end{bmatrix} \to \begin{bmatrix} 1 & 4 & 1 & 0 \\ 0 & -1 & -2 & 1 \end{bmatrix} \to x = \begin{bmatrix} -7 \\ 2 \end{bmatrix}$ و $x^* = \begin{bmatrix} 4 \\ -1 \end{bmatrix}$.
+		
+		\item (الف) اگر $d=0$ و $c \neq 0$ جوابی وجود ندارد. (ب) اگر $d=0=c$ جواب‌های زیادی وجود دارد. $a, b$ تأثیری ندارند.
+		
+		\item $A=AI=A(BC)=(AB)C=IC=C$. آن معادله وسطی بسیار مهم است.
+		
+		\item $E= \begin{bmatrix} 1 & 0 & 0 & 0 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{bmatrix}$ هر سطر را از سطر بعدی کم می‌کند. نتیجه $\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & 1 & 2 & 1 \end{bmatrix}$ هنوز در یک ماتریس پاسکال ۳ در ۳ دارای مضرب‌های ۱ است. حاصل‌ضرب M از تمام ماتریس‌های حذف برابر است با $\begin{bmatrix} 1 & 0 & 0 & 0 \\ -1 & 1 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ -1 & 3 & -3 & 1 \end{bmatrix}$. این «ماتریس پاسکال با علامت متناوب» در صفحه ۹۱ آمده است.
+		
+		\item (الف) $E=A^{-1}= \begin{bmatrix} 1 & 0 \\ -1 & 1 \end{bmatrix}$ سطر دوم $EM$ را به `[2 3]` کاهش می‌دهد. (ب) سپس $F=B^{-1}= \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}$ سطر اول $FEM$ را به `[1 1]` کاهش می‌دهد. (ج) سپس $E=A^{-1}$ دو بار، سطر دوم $EEFEM$ را به `[0 1]` کاهش می‌دهد. (د) اکنون $EEFEM=B$. ماتریس‌های E و F را جابجا کنید تا $M=ABAAB$ به دست آید. این سوال بر روی ماتریس‌های با درایه‌های صحیح مثبت $M$ با $ad-bc=1$ تمرکز دارد. همین مراحل درایه‌ها را کوچکتر و کوچکتر می‌کنند تا زمانی که M حاصل‌ضرب‌هایی از A و B شود.
+		
+		\item $E_{21}= \begin{bmatrix} 1 & & & \\ a & 1 & & \\ 0 & 0 & 1 & \\ 0 & 0 & 0 & 1 \end{bmatrix}, E_{32}= \begin{bmatrix} 1 & & & \\ 0 & 1 & & \\ 0 & b & 1 & \\ 0 & 0 & 0 & 1 \end{bmatrix}, E_{43}= \begin{bmatrix} 1 & & & \\ 0 & 1 & & \\ 0 & 0 & 1 & \\ 0 & 0 & c & 1 \end{bmatrix}, E_{43}E_{32}E_{21}= \begin{bmatrix} 1 & & & \\ a & 1 & & \\ ab & b & 1 & \\ abc & bc & c & 1 \end{bmatrix}$.
+		
+	\end{enumerate}
+	
+\end{document}```

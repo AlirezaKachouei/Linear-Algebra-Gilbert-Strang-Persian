@@ -1,0 +1,235 @@
+\documentclass[12pt, a4paper]{book}
+
+% =================================================
+% فراخوانی بسته‌های لازم
+% =================================================
+\usepackage{amsmath}         % برای فرمول‌های پیشرفته ریاضی
+\usepackage{amsfonts}        % بسته برای فونت‌های ریاضی مانند \mathbb
+\usepackage{amssymb}         % برای نمادهای بیشتر ریاضی
+\usepackage{graphicx}        % بسته برای افزودن تصاویر
+\usepackage{xepersian}       % بسته اصلی برای پارسی‌نویسی
+\usepackage{geometry}        % برای تنظیم حاشیه‌ها
+\usepackage{setspace}        % برای تنظیم فاصله خطوط
+\usepackage{framed}          % بسته برای ایجاد کادر دور متن
+\usepackage{amsthm}          % بسته برای محیط اثبات
+\usepackage{xcolor}          % برای رنگی کردن متن
+
+% =================================================
+% تنظیمات صفحه و فونت
+% =================================================
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+% تنظیم فونت‌های نوشتاری و ریاضی
+% توجه: این فونت‌ها باید روی سیستم شما نصب باشند
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+\setmathdigitfont{XB Niloofar}
+
+% فارسی‌سازی نام محیط اثبات
+\renewcommand{\proofname}{اثبات}
+
+% =================================================
+% شروع سند
+% =================================================
+\begin{document}
+	
+	% این یک سند نمونه فقط برای بخش ۱.۳ است
+	\chapter{فصل ۱: مقدمه‌ای بر بردارها }
+	
+	\section{بردارها و ترکیب‌های خطی}
+	\section{طول‌ها و ضرب‌های داخلی}
+	% اعمال فاصله 1.5 بین خطوط برای خوانایی بهتر
+	\onehalfspacing
+	
+	\section{ماتریس‌ها}
+	
+	\begin{enumerate}
+		\item $A = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix}$ یک ماتریس ۳ در ۲ است: $m=3$ سطر و $n=2$ ستون.
+		\item $A\mathbf{x} = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$ یک ترکیب خطی از ستون‌ها است.
+		\item سه مؤلفه $A\mathbf{x}$ حاصلضرب داخلی ۳ سطر ماتریس $A$ با بردار $\mathbf{x}$ هستند.
+		\item معادلات به شکل ماتریسی $A\mathbf{x}=\mathbf{b}$: $\begin{bmatrix} 2 & 5 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix}$ جایگزین دستگاه $2x_1+5x_2=b_1$ و $x_1+x_2=b_2$ می‌شود.
+		\item جواب $A\mathbf{x}=\mathbf{b}$ را می‌توان به صورت $\mathbf{x}=A^{-1}\mathbf{b}$ نوشت. اما برخی ماتریس‌ها $A^{-1}$ ندارند.
+	\end{enumerate}
+	
+	این بخش با سه بردار $\mathbf{u}, \mathbf{v}, \mathbf{w}$ شروع می‌کند. من آن‌ها را با استفاده از ماتریس‌ها ترکیب خواهم کرد.
+	\[ \text{سه بردار} \quad \mathbf{u} = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} \quad \mathbf{v} = \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} \quad \mathbf{w} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \]
+	ترکیب‌های خطی آن‌ها در فضای سه بعدی به صورت $x_1\mathbf{u} + x_2\mathbf{v} + x_3\mathbf{w}$ است:
+	\begin{equation}
+		x_1 \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} + x_3 \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} x_1 \\ x_2 - x_1 \\ x_3 - x_2 \end{bmatrix}
+	\end{equation}
+	اکنون یک نکته مهم: آن ترکیب را با استفاده از یک ماتریس بازنویسی می‌کنیم. بردارهای $\mathbf{u}, \mathbf{v}, \mathbf{w}$ به ستون‌های ماتریس $A$ تبدیل می‌شوند. آن ماتریس، بردار $(x_1, x_2, x_3)$ را «ضرب» می‌کند:
+	\begin{equation}
+		\textbf{ماتریس ضربدر بردار} \quad A\mathbf{x} = \begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} x_1 \\ x_2 - x_1 \\ x_3 - x_2 \end{bmatrix}
+	\end{equation}
+	اعداد $x_1, x_2, x_3$ مؤلفه‌های یک بردار $\mathbf{x}$ هستند. حاصلضرب ماتریس $A$ در بردار $\mathbf{x}$ همان ترکیب $x_1\mathbf{u} + x_2\mathbf{v} + x_3\mathbf{w}$ از سه ستون در معادله (۱) است.
+	
+	\vspace{5mm}
+	\textit{\textbf{(توضیح مترجم: دو دیدگاه برای ضرب ماتریس در بردار)} \\
+		این بخش مهم‌ترین ایده این فصل را معرفی می‌کند. برای محاسبه حاصلضرب $A\mathbf{x}$ دو راه وجود دارد:
+		\begin{enumerate}
+			\item \textbf{دیدگاه سطری (روشی که معمولاً ابتدا یاد می‌گیریم):} حاصلضرب $A\mathbf{x}$ برداری است که هر مؤلفه آن، حاصل \textbf{ضرب داخلی} یکی از \textbf{سطرهای} ماتریس $A$ در بردار $\mathbf{x}$ است.
+			\[ \begin{bmatrix} \text{— سطر ۱ —} \\ \text{— سطر ۲ —} \\ \text{— سطر ۳ —} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} (\text{سطر ۱}) \cdot \mathbf{x} \\ (\text{سطر ۲}) \cdot \mathbf{x} \\ (\text{سطر ۳}) \cdot \mathbf{x} \end{bmatrix} \]
+			\item \textbf{دیدگاه ستونی (مهم‌ترین دیدگاه در جبر خطی):} حاصلضرب $A\mathbf{x}$ یک \textbf{ترکیب خطی} از \textbf{ستون‌های} ماتریس $A$ است که ضرایب این ترکیب، مؤلفه‌های بردار $\mathbf{x}$ هستند.
+			\[ \begin{bmatrix} | & | & | \\ \mathbf{u} & \mathbf{v} & \mathbf{w} \\ | & | & | \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = x_1\mathbf{u} + x_2\mathbf{v} + x_3\mathbf{w} \]
+		\end{enumerate}
+		این دو دیدگاه دقیقاً یک نتیجه را می‌دهند، اما دیدگاه ستونی از نظر مفهومی بسیار قدرتمندتر است و به ما کمک می‌کند تا بفهمیم معادلات خطی واقعاً به چه معنا هستند.}
+	\vspace{5mm}
+	
+	\subsection*{معادلات خطی}
+	یک تغییر دیدگاه دیگر حیاتی است. تا به حال، اعداد $x_1, x_2, x_3$ معلوم بودند. ما بردار $\mathbf{b}$ را با ضرب کردن $A$ در $\mathbf{x}$ پیدا می‌کردیم. اکنون ما $\mathbf{b}$ را معلوم فرض کرده و به دنبال $\mathbf{x}$ می‌گردیم.
+	\begin{itemize}
+		\item \textbf{سوال قدیم:} ترکیب خطی $x_1\mathbf{u} + x_2\mathbf{v} + x_3\mathbf{w}$ را برای یافتن $\mathbf{b}$ محاسبه کنید.
+		\item \textbf{سوال جدید:} \textbf{کدام} ترکیب از $\mathbf{u}, \mathbf{v}, \mathbf{w}$ بردار خاص $\mathbf{b}$ را تولید می‌کند؟
+	\end{itemize}
+	این مسئله معکوس است—یافتن ورودی $\mathbf{x}$ که خروجی مطلوب $\mathbf{b}=A\mathbf{x}$ را بدهد. شما این را قبلاً به عنوان یک دستگاه معادلات خطی برای $x_1, x_2, x_3$ دیده‌اید.
+	
+	\[
+	\textbf{معادلات } A\mathbf{x}=\mathbf{b} \quad
+	\begin{cases}
+		x_1 = b_1 \\
+		-x_1 + x_2 = b_2 \\
+		-x_2 + x_3 = b_3
+	\end{cases}
+	\quad \textbf{جواب } \mathbf{x} = A^{-1}\mathbf{b} \quad
+	\begin{cases}
+		x_1 = b_1 \\
+		x_2 = b_1 + b_2 \\
+		x_3 = b_1 + b_2 + b_3
+	\end{cases}
+	\]
+	باید اعتراف کنم—اکثر دستگاه‌های خطی به این راحتی حل نمی‌شوند. در این مثال، معادلات را می‌توان به ترتیب (از بالا به پایین) حل کرد زیرا $A$ یک ماتریس \textbf{مثلثی} است.
+	
+	\subsection*{ماتریس معکوس}
+	بیایید جواب \mathbf{x} را در معادله (۶) تکرار کنیم. یک ماتریس «جمع» ظاهر خواهد شد!
+	\begin{equation}
+		A\mathbf{x} = \mathbf{b} \quad \text{با جواب} \quad \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_1 + b_2 \\ b_1 + b_2 + b_3 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+	\end{equation}
+	اگر تفاضل‌های xها برابر با bها باشند، آنگاه جمع‌های bها برابر با xها هستند. این برای اعداد فرد $\mathbf{b}=(1,3,5)$ و مربع‌های کامل $\mathbf{x}=(1,4,9)$ صادق بود. این برای همه بردارها صادق است.
+	ماتریس جمع در معادله (۷) \textbf{معکوس} ($A^{-1}$) ماتریس تفاضلی $A$ است.
+	
+	\textbf{مثال:} تفاضل‌های بردار $\mathbf{x}=(1,2,3)$ برابر با $\mathbf{b}=(1,1,1)$ است. بنابراین $\mathbf{b}=A\mathbf{x}$ و $\mathbf{x}=A^{-1}\mathbf{b}$:
+	\[ A\mathbf{x} = \begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \quad \text{و} \quad A^{-1}\mathbf{b} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \]
+	معادله (۷) برای بردار جواب $\mathbf{x}=(x_1,x_2,x_3)$ دو حقیقت مهم را به ما می‌گوید:
+	\begin{enumerate}
+		\item برای هر $\mathbf{b}$، یک جواب برای $A\mathbf{x}=\mathbf{b}$ وجود دارد.
+		\item ماتریس $A^{-1}$ جواب $\mathbf{x}=A^{-1}\mathbf{b}$ را تولید می‌کند.
+	\end{enumerate}
+	فصول بعدی به دیگر معادلات $A\mathbf{x}=\mathbf{b}$ می‌پردازند. آیا جوابی وجود دارد؟ چگونه آن را پیدا کنیم؟
+	
+	\vspace{5mm}
+	\textit{\textbf{(توضیح مترجم: ارتباط با حسابان)} \\
+		بیایید این ماتریس‌های خاص را به حسابان متصل کنیم. بردار \mathbf{x} به یک تابع x(t) تبدیل می‌شود. تفاضل‌های $A\mathbf{x}$ به مشتق $dx/dt = b(t)$ تبدیل می‌شوند. در جهت معکوس، جمع‌های $A^{-1}\mathbf{b}$ به انتگرال b(t) تبدیل می‌شوند. جمع تفاضل‌ها مانند انتگرال مشتق‌هاست.
+		قضیه اساسی حسابان می‌گوید: انتگرال‌گیری معکوس مشتق‌گیری است.
+		\begin{equation}
+			A\mathbf{x}=\mathbf{b} \text{ و } \mathbf{x}=A^{-1}\mathbf{b} \quad \iff \quad \frac{dx}{dt}=b(t) \text{ و } x(t) = \int_0^t b(\tau)d\tau
+		\end{equation}
+		تفاضل مربع‌های کامل ۰، ۱، ۴، ۹ اعداد فرد ۱، ۳، ۵ هستند. مشتق $x(t)=t^2$ برابر با $2t$ است. یک قیاس کامل باید اعداد زوج \mathbf{b}=(2,4,6) را در زمان‌های t=1,2,3 تولید می‌کرد. اما تفاضل‌ها با مشتق‌ها یکسان نیستند، و ماتریس $A$ ما به جای $2t$، $2t-1$ را تولید می‌کند:
+		\begin{equation}
+			\textbf{تفاضل پس‌رو:} \quad x(t) - x(t-1) = t^2 - (t-1)^2 = t^2 - (t^2 - 2t + 1) = 2t-1
+		\end{equation}
+		مجموعه مسائل نشان خواهد داد که «تفاضل‌های پیش‌رو» $2t+1$ را تولید می‌کنند. بهترین انتخاب (که همیشه در دوره‌های حسابان دیده نمی‌شود) یک \textbf{تفاضل مرکزی} است که از $x(t+1)-x(t-1)$ استفاده می‌کند. این $\Delta x$ را بر فاصله $\Delta t$ از $t-1$ تا $t+1$ که برابر با ۲ است، تقسیم کنید:
+		\begin{equation}
+			\textbf{تفاضل مرکزی از $x(t)=t^2$:} \quad \frac{(t+1)^2 - (t-1)^2}{2} = \frac{4t}{2} = 2t \quad \text{(دقیقاً)}
+		\end{equation}
+		ماتریس‌های تفاضلی عالی هستند. نوع مرکزی بهترین است. مثال دوم ما معکوس‌پذیر نیست.}
+	
+	\subsection*{اختلاف‌های دوری}
+	این مثال ستون‌های $\mathbf{u}$ و $\mathbf{v}$ را حفظ می‌کند اما $\mathbf{w}$ را به یک بردار جدید $\mathbf{w}^*$ تغییر می‌دهد:
+	\[ \text{مثال دوم} \quad \mathbf{u} = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} \quad \mathbf{v} = \begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix} \quad \mathbf{w}^* = \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix} \]
+	اکنون ترکیب‌های خطی از $\mathbf{u}, \mathbf{v}, \mathbf{w}^*$ به یک ماتریس اختلاف «دوری» $C$ منجر می‌شود:
+	\begin{equation}
+		C\mathbf{x} = \begin{bmatrix} 1 & 0 & -1 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} x_1 - x_3 \\ x_2 - x_1 \\ x_3 - x_2 \end{bmatrix} = \mathbf{b}
+	\end{equation}
+	این ماتریس $C$ معکوس‌پذیر \textbf{نیست}. حل $C\mathbf{x}=\mathbf{b}$ غیرممکن است، زیرا معادلات یا بی‌نهایت جواب دارند (گاهی) یا هیچ جوابی ندارند (معمولاً).
+	\begin{itemize}
+		\item \textbf{بی‌نهایت جواب برای $C\mathbf{x}=\mathbf{0}$:} هر بردار ثابت مانند $\mathbf{x}=(c,c,c)$ اختلاف‌های دوری صفر دارد.
+		\item \textbf{هیچ جوابی برای $C\mathbf{x}=\mathbf{b}$:} سمت چپ‌های معادله $(x_1-x_3)+(x_2-x_1)+(x_3-x_2)$ همیشه با هم جمع شده و صفر می‌شوند. بنابراین، برای اینکه جوابی وجود داشته باشد، سمت راست‌ها نیز باید جمعشان صفر شود: $b_1+b_2+b_3=0$. اگر این شرط برقرار نباشد، جوابی وجود ندارد.
+	\end{itemize}
+	
+	\subsection*{استقلال و وابستگی}
+	بیایید این موضوع را به صورت هندسی ببینیم.
+	\begin{itemize}
+		\item \textbf{استقلال خطی:} ستون‌های ماتریس $A$ یعنی $(\mathbf{u},\mathbf{v},\mathbf{w})$، در یک صفحه قرار \textbf{ندارند}. ترکیب‌های خطی آن‌ها تمام فضای سه بعدی را پر می‌کنند. به همین دلیل $A\mathbf{x}=\mathbf{b}$ همیشه جواب دارد.
+		\item \textbf{وابستگی خطی:} ستون‌های ماتریس $C$ یعنی $(\mathbf{u},\mathbf{v},\mathbf{w}^*)$، همگی در یک صفحه قرار \textbf{دارند}. ترکیب‌های خطی آن‌ها فقط می‌توانند بردارهایی را در همان صفحه تولید کنند. دلیل آن این است که $\mathbf{w}^*$ خود ترکیبی از $\mathbf{u}$ و $\mathbf{v}$ است: $\mathbf{w}^* = -\mathbf{u}-\mathbf{v}$. بنابراین، بردار سوم هیچ «جهت جدیدی» به مجموعه اضافه نمی‌کند.
+	\end{itemize}
+	\begin{figure}[h!]
+		\centering
+		\fbox{تصویر شکل ۱.۱۰ در اینجا قرار می‌گیرد}
+		\caption{بردارهای مستقل $\mathbf{u},\mathbf{v},\mathbf{w}$. بردارهای وابسته $\mathbf{u},\mathbf{v},\mathbf{w}^*$ در یک صفحه.}
+	\end{figure}
+	این دو کلمه کلیدی جبر خطی هستند:
+	\begin{itemize}
+		\item \textbf{بردارهای مستقل:} تنها ترکیب خطی که حاصل آن صفر است، ترکیب بدیهی است (همه ضرایب صفر). ماتریس حاصل، \textbf{معکوس‌پذیر} است.
+		\item \textbf{بردارهای وابسته:} ترکیب‌های غیربدیهی وجود دارند که حاصلشان صفر است. ماتریس حاصل، \textbf{تکین (منفرد)} یا معکوس‌ناپذیر است.
+	\end{itemize}
+	
+	\newpage
+	\subsection*{مروری بر ایده‌های کلیدی (بخش ۱.۳)}
+	\begin{enumerate}
+		\item ضرب ماتریس در بردار ($A\mathbf{x}$): یک ترکیب خطی از ستون‌های $A$ است.
+		\item جواب معادله $A\mathbf{x}=\mathbf{b}$ برابر با $\mathbf{x}=A^{-1}\mathbf{b}$ است، زمانی که $A$ یک ماتریس معکوس‌پذیر باشد.
+		\item ماتریس دوری $C$ معکوس ندارد. سه ستون آن در یک صفحه قرار دارند. این ستون‌های وابسته با هم جمع شده و بردار صفر را می‌دهند. $C\mathbf{x}=\mathbf{0}$ بی‌نهایت جواب دارد.
+		\item این بخش نگاهی به آینده و ایده‌های کلیدی دارد که هنوز به طور کامل توضیح داده نشده‌اند.
+	\end{enumerate}
+	
+	\subsection*{مثال‌های حل شده}
+	\subsubsection*{مثال ۱.۳ الف}
+	درایه جنوب غربی $a_{31}$ ماتریس $A$ (سطر ۳، ستون ۱) را به $a_{31}=1$ تغییر دهید:
+	\[ A\mathbf{x} = \begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 1 & -1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} \]
+	جواب $\mathbf{x}$ را برای هر $\mathbf{b}$ بیابید. از $\mathbf{x}=A^{-1}\mathbf{b}$ ماتریس معکوس $A^{-1}$ را استخراج کنید.
+	
+	\textbf{راه حل:} دستگاه مثلثی $A\mathbf{x}=\mathbf{b}$ را از بالا به پایین حل می‌کنیم:
+	\begin{itemize}
+		\item از سطر اول: $x_1 = b_1$
+		\item از سطر دوم: $-x_1+x_2=b_2 \implies x_2 = x_1+b_2 = b_1+b_2$
+		\item از سطر سوم: $x_1-x_2+x_3=b_3 \implies x_3 = -x_1+x_2+b_3 = -b_1+(b_1+b_2)+b_3=b_2+b_3$
+	\end{itemize}
+	پس جواب به صورت $\mathbf{x}=A^{-1}\mathbf{b}$ برابر است با:
+	\[ \mathbf{x} = \begin{bmatrix} b_1 \\ b_1+b_2 \\ b_2+b_3 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} \implies A^{-1} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \]
+	
+	\subsubsection*{مثال ۱.۳ ب}
+	$E$ یک ماتریس حذفی است. $E$ یک عمل تفریق انجام می‌دهد و $E^{-1}$ یک عمل جمع.
+	\[ \mathbf{b} = E\mathbf{x} \implies \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ -l & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \]
+	معادله اول $x_1=b_1$ است. معادله دوم $x_2-lx_1=b_2$ است. معکوس، $lb_1$ را به $b_2$ اضافه خواهد کرد:
+	\[ \mathbf{x} = E^{-1}\mathbf{b} = \begin{bmatrix} 1 & 0 \\ l & 1 \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \end{bmatrix} \]
+	
+	\subsection*{مجموعه مسائل ۱.۳}
+	\begin{enumerate}
+		\item ترکیب خطی $3\mathbf{s}_1 + 4\mathbf{s}_2 + 5\mathbf{s}_3 = \mathbf{b}$ را بیابید. سپس $\mathbf{b}$ را به صورت ضرب ماتریس-بردار $S\mathbf{x}$ بنویسید، که در آن ۳، ۴ و ۵ در $\mathbf{x}$ قرار دارند. سه ضرب داخلی (سطرهای $S$)$\cdot \mathbf{x}$ را محاسبه کنید:
+		\[ \mathbf{s}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \quad \mathbf{s}_2 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \quad \mathbf{s}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \]
+		\item معادلات زیر را حل کنید:
+		\[ \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \quad \text{و} \quad \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix} = \begin{bmatrix} 1 \\ 4 \\ 9 \end{bmatrix} \]
+		$S$ یک ماتریس جمع است. مجموع ۵ عدد فرد اول برابر با \_\_\_ است.
+		\item این سه معادله را برای $y_1, y_2, y_3$ بر حسب $c_1, c_2, c_3$ حل کنید:
+		\[ S\mathbf{y} = \mathbf{c} \quad \text{که در آن} \quad S = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \]
+		جواب $\mathbf{y}$ را به صورت یک ماتریس $A=S^{-1}$ ضربدر بردار $\mathbf{c}$ بنویسید. آیا ستون‌های $S$ مستقل هستند یا وابسته؟
+		\item ترکیبی از $x_1\mathbf{w}_1+x_2\mathbf{w}_2+x_3\mathbf{w}_3$ را بیابید که با $x_1=1$ برابر با بردار صفر شود:
+		\[ \mathbf{w}_1 = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \quad \mathbf{w}_2 = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix} \quad \mathbf{w}_3 = \begin{bmatrix} 7 \\ 8 \\ 9 \end{bmatrix} \]
+		این بردارها (مستقل) (وابسته) هستند. این سه بردار در یک \_\_\_ قرار دارند. ماتریس $W$ با این سه ستون معکوس‌پذیر نیست.
+		\item سطرهای ماتریس $W$ (در مسئله قبل) سه بردار زیر را تولید می‌کنند (که آنها را به صورت ستونی می‌نویسیم):
+		\[ \mathbf{r}_1 = \begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} \quad \mathbf{r}_2 = \begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} \quad \mathbf{r}_3 = \begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} \]
+		جبر خطی می‌گوید که این بردارها نیز باید در یک صفحه قرار گیرند. بنابراین، باید ترکیب‌های زیادی به صورت $y_1\mathbf{r}_1 + y_2\mathbf{r}_2 + y_3\mathbf{r}_3 = \mathbf{0}$ وجود داشته باشد. دو مجموعه از $y$ها را بیابید.
+		\item چه اعدادی برای $c$ ستون‌های زیر را وابسته می‌کنند تا ترکیبی از ستون‌ها برابر با صفر شود؟
+		\[ \begin{bmatrix} 1 & c \\ c & 1 \end{bmatrix} \quad \begin{bmatrix} 1 & 2 & 3 \\ 4 & c & 5 \\ 6 & 7 & 8 \end{bmatrix} \quad \begin{bmatrix} c & c & c \\ 2 & 3 & 4 \\ 5 & 6 & 7 \end{bmatrix} \]
+		\item اگر ستون‌ها در $A\mathbf{x}=\mathbf{0}$ ترکیب شوند، آنگاه هر یک از سطرها $\mathbf{r}\cdot\mathbf{x}=0$ دارد:
+		\[ A\mathbf{x} = \begin{bmatrix} \mathbf{r}_1 \\ \mathbf{r}_2 \\ \mathbf{r}_3 \end{bmatrix} \mathbf{x} = \begin{bmatrix} \mathbf{r}_1 \cdot \mathbf{x} \\ \mathbf{r}_2 \cdot \mathbf{x} \\ \mathbf{r}_3 \cdot \mathbf{x} \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \]
+		سه سطر نیز در یک صفحه قرار دارند. چرا آن صفحه بر $\mathbf{x}$ عمود است؟
+		\item با رفتن به یک معادله تفاضلی ۴ در ۴، $A\mathbf{x}=\mathbf{b}$، چهار مؤلفه $x_1, x_2, x_3, x_4$ را بیابید. سپس این جواب را به صورت $\mathbf{x}=A^{-1}\mathbf{b}$ بنویسید تا ماتریس معکوس را بیابید:
+		\[ A\mathbf{x} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ b_4 \end{bmatrix} = \mathbf{b} \]
+		\item ماتریس تفاضلی دوری ۴ در ۴، $C$، چیست؟ این ماتریس در هر سطر و هر ستون یک ۱ و یک ۱- خواهد داشت. تمام جواب‌های $\mathbf{x}=(x_1,x_2,x_3,x_4)$ برای $C\mathbf{x}=\mathbf{0}$ را بیابید. چهار ستون $C$ در یک «ابرصفحه سه بعدی» درون فضای چهار بعدی قرار دارند.
+		\item یک ماتریس تفاضل پیشرو $\Delta$، بالا-مثلثی است:
+		\[ \Delta \mathbf{z} = \begin{bmatrix} -1 & 1 & 0 \\ 0 & -1 & 1 \\ 0 & 0 & -1 \end{bmatrix} \begin{bmatrix} z_1 \\ z_2 \\ z_3 \end{bmatrix} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = \mathbf{b} \]
+		$z_1, z_2, z_3$ را از روی $b_1, b_2, b_3$ بیابید. ماتریس معکوس در رابطه $\mathbf{z}=\Delta^{-1}\mathbf{b}$ چیست؟
+		\item نشان دهید که تفاضل‌های پیشرو $(t+1)^2-t^2$ برابر با $2t+1$ (اعداد فرد) هستند. مانند حسابان، تفاضل $(t+1)^n-t^n$ با مشتق $t^n$ که برابر با \_\_\_ است، شروع خواهد شد.
+		\item آخرین خطوط مثال حل شده می‌گویند که ماتریس تفاضل مرکزی ۴ در ۴ در معادله (۱۶) معکوس‌پذیر است. $C\mathbf{x}=(b_1,b_2,b_3,b_4)$ را حل کنید تا معکوس آن را در $\mathbf{x}=C^{-1}\mathbf{b}$ بیابید.
+		\item \textbf{مسائل چالشی:}
+		\item آخرین کلمات می‌گویند که ماتریس تفاضل مرکزی ۵ در ۵ معکوس‌پذیر نیست. ۵ معادله $C\mathbf{x}=\mathbf{b}$ را بنویسید. ترکیبی از سمت چپ‌ها را بیابید که صفر بدهد. چه ترکیبی از $b_1, b_2, b_3, b_4, b_5$ باید صفر باشد؟
+		\item اگر $(a,b)$ مضربی از $(c,d)$ باشد و $abcd \ne 0$، نشان دهید که $(a,c)$ مضربی از $(b,d)$ است. این به طور شگفت‌انگیزی مهم است. این سوال به این نتیجه منجر خواهد شد: اگر ماتریس $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$ سطرهای وابسته داشته باشد، آنگاه ستون‌های وابسته نیز دارد.
+	\end{enumerate}
+	
+\end{document}

@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           LaTeX Code for Problem Set 2.7           %
+%             Translated to Persian (Farsi)          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+
+% --- Preamble ---
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Title setup
+\title{ترجمه پاسخنامه مجموعه مسائل ۲.۷}
+\author{صفحه ۱۱۷}
+\date{}
+
+
+% --- Document Body ---
+\begin{document}
+	\maketitle
+	\RTL{
+		
+		\section*{مجموعه مسائل ۲.۷، صفحه ۱۱۷}
+		\begin{enumerate}
+			\item $A= \begin{bmatrix} 1 & 0 \\ 9 & 3 \end{bmatrix}$ دارای $A^T= \begin{bmatrix} 1 & 9 \\ 0 & 3 \end{bmatrix}$، $A^{-1}= \begin{bmatrix} 1 & 0 \\ -3 & 1/3 \end{bmatrix}$ و $(A^{-1})^T=(A^T)^{-1}= \begin{bmatrix} 1 & -3 \\ 0 & 1/3 \end{bmatrix}$ است؛
+			$A= \begin{bmatrix} 1 & c \\ c & 0 \end{bmatrix}$ دارای $A^T=A$ و $A^{-1}= \frac{1}{-c^2}\begin{bmatrix} 0 & -c \\ -c & 1 \end{bmatrix}$ است که این نیز متقارن است $(A^{-1})^T=A^{-1}$.
+			
+			\item $(AB)^T = \begin{bmatrix} 1 & 3 \\ 2 & 7 \end{bmatrix} = B^TA^T$. این پاسخ با $A^TB^T$ متفاوت است (مگر زمانی که $AB=BA$ باشد و ترانهاده‌گیری نتیجه دهد $B^TA^T=A^TB^T$).
+			
+			\item (الف) $((AB)^{-1})^T = (B^{-1}A^{-1})^T = (A^{-1})^T(B^{-1})^T$. این همچنین برابر است با $(A^T)^{-1}(B^T)^{-1}$.
+			(ب) اگر U بالا-مثلثی باشد، $U^{-1}$ نیز چنین است: آنگاه $(U^{-1})^T$ پایین-مثلثی است.
+			
+			\item $A=\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ دارای $A^2=0$ است. اما قطر $A^TA$ حاصلضرب‌های داخلی ستون‌های A در خودشان را دارد. اگر $A^TA=0$ باشد، حاصلضرب‌های داخلی صفر $\Rightarrow$ ستون‌های صفر $\Rightarrow$ A = ماتریس صفر.
+			
+			\item (الف) $x^TAy = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} = 5$.
+			(ب) این برابر است با سطر $x^TA = \begin{bmatrix} 4 & 5 & 6 \end{bmatrix}$ ضربدر y.
+			(ج) این همچنین برابر است با سطر $x^T$ ضربدر $Ay = \begin{bmatrix} 2 \\ 5 \end{bmatrix}$.
+			
+			\item $M^T = \begin{bmatrix} A^T & C^T \\ B^T & D^T \end{bmatrix}$؛ برای اینکه $M^T=M$ باشد، باید $A^T=A$، $B^T=C$ و $D^T=D$ باشد.
+			
+			\item (الف) غلط: $\begin{bmatrix} 0 & A \\ A^T & 0 \end{bmatrix}$ متقارن است.
+			(ب) غلط: ترانهاده AB برابر با $B^TA^T = BA$ است. بنابراین $(AB)^T=AB$ نیاز به $BA=AB$ دارد.
+			(ج) صحیح: ماتریس‌های متقارن معکوس‌پذیر، معکوس‌های متقارن دارند! ساده‌ترین اثبات، ترانهاده گرفتن از $AA^{-1}=I$ است.
+			(د) صحیح: $(ABC)^T = C^TB^TA^T$ (= CBA برای ماتریس‌های متقارن A, B, C).
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{7}
+			\item عدد ۱ در سطر اول n انتخاب دارد؛ سپس ۱ در سطر دوم n-1 انتخاب دارد ... (در کل !n حالت).
+			
+			\item $P_1P_2 = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix} = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}$ اما $P_2P_1 = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}$.
+			اگر $P_3$ و $P_4$ جفت‌های متفاوتی از سطرها را جابجا کنند، $P_3P_4=P_4P_3$ و هر دو جابجایی را انجام می‌دهند.
+			
+			\item جایگشت‌های (۳,۱,۲,۴) و (۲,۳,۱,۴) عنصر ۴ را در جای خود نگه می‌دارند؛ ۶ جایگشت زوج دیگر عنصر ۱ یا ۲ یا ۳ را ثابت نگه می‌دارند؛ جایگشت‌های (۲,۱,۴,۳) و (۳,۴,۱,۲) و (۴,۳,۲,۱) دو جفت را جابجا می‌کنند. جایگشت (۱,۲,۳,۴) همانی است. مجموعاً ۱۲ جایگشت زوج وجود دارد.
+			
+			\item $PA = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix} \begin{bmatrix} 0 & 0 & 6 \\ 1 & 2 & 3 \\ 0 & 4 & 5 \end{bmatrix} = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix}$ بالا مثلثی است. ضرب A از سمت راست در ماتریس جایگشت $P_2$، ستون‌های A را جابجا می‌کند. برای پایین مثلثی کردن این A، نیاز داریم که $P_1$ نیز سطرهای ۲ و ۳ را جابجا کند: $P_1AP_2 = \begin{bmatrix} 1 & & \\ & & 1 \\ & 1 & \end{bmatrix} A \begin{bmatrix} & & 1 \\ & 1 & \\ 1 & & \end{bmatrix} = \begin{bmatrix} 6 & 0 & 0 \\ 5 & 4 & 0 \\ 3 & 2 & 1 \end{bmatrix}$.
+			
+			\item $(P\boldsymbol{x})^T(P\boldsymbol{y}) = \boldsymbol{x}^TP^TP\boldsymbol{y} = \boldsymbol{x}^T\boldsymbol{y}$ زیرا $P^TP=I$. به طور کلی $P\boldsymbol{x} \cdot \boldsymbol{y} = \boldsymbol{x} \cdot P^T\boldsymbol{y} \neq \boldsymbol{x} \cdot P\boldsymbol{y}$.
+			
+			\item یک ماتریس جایگشت دوری مانند $P = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}$ یا ترانهاده آن دارای $P^3=I$ است: (۱,۲,۳) -> (۲,۳,۱) -> (۳,۱,۲) -> (۱,۲,۳). جایگشت $P' = \begin{bmatrix} 1 & 0 \\ 0 & P \end{bmatrix}$ دارای $(P')^3=I$ است.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{13}
+			\item «ماتریس همانی معکوس» P، بردار (۱,...,n) را به (n,...,۱) می‌برد. وقتی سطرها و همچنین ستون‌ها معکوس شوند، درایه‌های ۱,۱ و n,n در ماتریس A در $PAP^T$ جابجا می‌شوند. درایه‌های ۱,n و n,۱ نیز همینطور. به طور کلی، $(PAP^T)_{ij}$ برابر با $(A)_{n-i+1, n-j+1}$ است.
+			
+			\item (الف) اگر P سطر ۱ را به سطر ۴ ببرد، آنگاه $P^T$ سطر ۴ را به سطر ۱ می‌برد. (ب) $P = \begin{bmatrix} E & 0 \\ 0 & E \end{bmatrix} = P^T$ با $E = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ تمام سطرها را جابجا می‌کند: ۱ و ۲ جابجا می‌شوند، ۳ و ۴ جابجا می‌شوند.
+			
+			\item $A^2-B^2$ و همچنین $ABA$ متقارن هستند اگر A و B متقارن باشند. اما $(A+B)(A-B)$ و $ABAB$ به طور کلی متقارن نیستند.
+			
+			\item (الف) $S = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = S^T$ معکوس‌پذیر نیست. (ب) $S = \begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}$ نیاز به جابجایی سطر دارد. (ج) $S = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}$ دارای محورهای $D = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$ است: ریشه دوم حقیقی ندارد.
+			
+			\item (الف) $5+4+3+2+1=15$ درایه مستقل اگر $S=S^T$ باشد. (ب) L دارای ۱۰ درایه و D دارای ۵ درایه است؛ مجموعاً ۱۵ درایه در $LDL^T$. (ج) اگر $A^T=-A$ باشد، قطر صفر است و $4+3+2+1=10$ انتخاب باقی می‌ماند.
+			
+			\item (الف) ترانهاده $A^TSA$ برابر است با $A^TS^TA = A^TSA$ که ماتریسی n×n است وقتی $S^T=S$ (برای هر ماتریس m×n مانند A). (ب) $(A^TA)_{jj} = (\text{ستون j از A}) \cdot (\text{ستون j از A}) = (\text{طول مربع ستون j}) \ge 0$.
+			
+			\item $\begin{bmatrix} 1 & 3 \\ 3 & 2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & -7 \end{bmatrix} \begin{bmatrix} 1 & 3 \\ 0 & 1 \end{bmatrix}$.
+			$\begin{bmatrix} 1 & b \\ b & c \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ b & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & c-b^2 \end{bmatrix} \begin{bmatrix} 1 & b \\ 0 & 1 \end{bmatrix}$.
+			$\begin{bmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2 \end{bmatrix} = \begin{bmatrix} 1 & & \\ -1/2 & 1 & \\ 0 & -2/3 & 1 \end{bmatrix} \begin{bmatrix} 2 & & \\ & 3/2 & \\ & & 4/3 \end{bmatrix} \begin{bmatrix} 1 & -1/2 & 0 \\ & 1 & -2/3 \\ & & 1 \end{bmatrix} = LDL^T$.
+			
+			\item حذف روی یک ماتریس متقارن ۳×۳، یک ماتریس متقارن ۲×۲ در پایین سمت راست باقی می‌گذارد.
+			$\begin{bmatrix} 2 & 4 & 8 \\ 4 & 3 & 9 \\ 8 & 9 & 0 \end{bmatrix}$ و $\begin{bmatrix} 1 & b & c \\ b & d & e \\ c & e & f \end{bmatrix}$ به ترتیب به $\begin{bmatrix} -5 & -7 \\ -7 & -32 \end{bmatrix}$ و $\begin{bmatrix} d-b^2 & e-bc \\ e-bc & f-c^2 \end{bmatrix}$ منجر می‌شوند که متقارن هستند!
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{21}
+			\item $\begin{bmatrix} & 1 & \\ 1 & & \\ & & 1 \end{bmatrix} A = \begin{bmatrix} 1 & & \\ 0 & 1 & \\ 2 & 3 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 1 \\ & 1 & 1 \\ & & -1 \end{bmatrix}$.
+			
+			\item $A = \begin{bmatrix} 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} = P$ و $L=U=I$. حذف روی این $A=P$، سطرهای ۱-۲، سپس ۲-۳ و سپس ۳-۴ را جابجا می‌کند.
+			
+			\item $PA=LU$ به صورت $\begin{bmatrix} & & 1 \\ & 1 & \\ 1 & & \end{bmatrix} \begin{bmatrix} 0 & 1 & 2 \\ 0 & 3 & 8 \\ 2 & 1 & 1 \end{bmatrix} = \begin{bmatrix} 1 & & \\ 0 & 1 & \\ 0 & 1/3 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 & 1 \\ & 3 & 8 \\ & & -2/3 \end{bmatrix}$ است.
+			
+			\item یک راه برای تشخیص زوج یا فرد بودن یک جایگشت، شمردن تمام جفت‌هایی است که P در ترتیب اشتباه قرار داده است. آنگاه P زوج یا فرد است وقتی آن شمارش زوج یا فرد باشد. مرحله دشوار: نشان دهید که یک جابجایی همیشه آن شمارش را تغییر می‌دهد! آنگاه ۳ یا ۵ جابجایی آن شمارش را فرد باقی می‌گذارند.
+			
+			\item (الف) $E_{21} = \begin{bmatrix} 1 & & \\ -3 & 1 & \\ & & 1 \end{bmatrix}$ درایه (۲,۱) ماتریس $E_{21}A$ را صفر می‌کند. آنگاه $E_{21}AE_{21}^T = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 4 \\ 0 & 4 & 9 \end{bmatrix}$ هنوز متقارن است و درایه (۱,۲) آن نیز صفر است.
+			(ب) اکنون از $E_{32} = \begin{bmatrix} 1 & & \\ & 1 & \\ & -2 & 1 \end{bmatrix}$ استفاده کنید تا درایه (۳,۲) صفر شود و $E_{32}E_{21}AE_{21}^T E_{32}^T = D$ نیز درایه (۲,۳) خود را صفر خواهد داشت. نکته کلیدی: حذف از هر دو طرف (سطرها + ستون‌ها) تجزیه متقارن $LDL^T$ را نتیجه می‌دهد.
+			
+			\item $A = \begin{bmatrix} 0 & 1 & 2 & 3 \\ 1 & 2 & 3 & 0 \\ 2 & 3 & 0 & 1 \\ 3 & 0 & 1 & 2 \end{bmatrix} = A^T$ در هر سطر خود ۰,۱,۲,۳ را دارد. من قانونی برای چنین ساختار متقارنی (ماتریس هانکل با پادقطرهای ثابت) نمی‌شناسم.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{27}
+			\item مرتب‌سازی مجدد سطرها و/یا ستون‌های $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ درایه a را جابجا می‌کند. بنابراین نتیجه نمی‌تواند ترانهاده باشد (که a را جابجا نمی‌کند).
+			
+			\item (الف) جریان‌های کل $A^T\boldsymbol{y} = \begin{bmatrix} 1 & 0 & 1 \\ -1 & 1 & 0 \\ 0 & -1 & -1 \end{bmatrix} \begin{bmatrix} y_{BC} \\ y_{CS} \\ y_{BS} \end{bmatrix} = \begin{bmatrix} y_{BC}+y_{BS} \\ -y_{BC}+y_{CS} \\ -y_{CS}-y_{BS} \end{bmatrix}$ هستند.
+			(ب) در هر دو حالت $(A\boldsymbol{x})^T\boldsymbol{y} = \boldsymbol{x}^T(A^T\boldsymbol{y}) = x_B y_{BC} + x_B y_{BS} - x_C y_{BC} + x_C y_{CS} - x_S y_{CS} - x_S y_{BS}$. شش جمله.
+			
+			\item $\begin{bmatrix} 1 & 50 \\ 40 & 1000 \\ 2 & 50 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = A\boldsymbol{x}$; $A^T\boldsymbol{y} = \begin{bmatrix} 1 & 40 & 2 \\ 50 & 1000 & 50 \end{bmatrix} \begin{bmatrix} 700 \\ 3 \\ 3000 \end{bmatrix} = \begin{bmatrix} 6820 \\ 188000 \end{bmatrix}$ (۱ کامیون، ۱ هواپیما).
+			
+			\item $A\boldsymbol{x} \cdot \boldsymbol{y}$ هزینه ورودی‌هاست در حالی که $\boldsymbol{x} \cdot A^T\boldsymbol{y}$ ارزش خروجی‌هاست.
+			
+			\item $P^3=I$ بنابراین سه دوران برای ۳۶۰ درجه؛ P هر بردار v را حول خط (۱,۱,۱) به اندازه ۱۲۰ درجه می‌چرخاند.
+			
+			\item $\begin{bmatrix} 1 & 2 \\ 4 & 9 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix} = EH$ = (ماتریس مقدماتی) ضربدر (ماتریس متقارن).
+			
+			\item $L(U^T)^{-1}$ حاصلضرب پایین‌مثلثی در پایین‌مثلثی است، بنابراین پایین‌مثلثی است. ترانهاده $U^TDU$ برابر با $(U^TDU)^T = U^TD^T(U^T)^T = U^TDU$ است، بنابراین $U^TDU$ متقارن است.
+			
+			\item اینها گروه هستند: ماتریس‌های پایین‌مثلثی با درایه‌های قطری ۱، ماتریس‌های قطری معکوس‌پذیر D، ماتریس‌های جایگشت P، ماتریس‌های متعامد با $Q^T=Q^{-1}$.
+			
+			\item قطعاً $B^T$ شمال-غربی است. $B^2$ یک ماتریس کامل است! $B^{-1}$ جنوب-شرقی است. سطرهای B به ترتیب معکوس از یک ماتریس پایین‌مثلثی L هستند، بنابراین $B=PL$. آنگاه $B^{-1}=L^{-1}P^{-1}$ ستون‌ها را به ترتیب معکوس از $L^{-1}$ دارد. بنابراین $B^{-1}$ جنوب-شرقی است.
+			
+			\item تعداد !n ماتریس جایگشت از مرتبه n وجود دارد. سرانجام دو توان از P باید همان جایگشت باشند. و اگر $P^r=P^s$ باشد، آنگاه $P^{r-s}=I$. قطعاً $r-s \le n!$.
+			
+		\end{enumerate}
+		
+		\begin{enumerate}
+			\setcounter{enumi}{37}
+			\item برای تجزیه ماتریس M به (متقارن S) + (پادمتقارن A)، تنها انتخاب این است که $S = \frac{1}{2}(M+M^T)$ و $A = \frac{1}{2}(M-M^T)$.
+			
+			\item از $Q^TQ=I$ شروع کنید، به این صورت: $\begin{bmatrix} \boldsymbol{q}_1^T \\ \boldsymbol{q}_2^T \end{bmatrix} \begin{bmatrix} \boldsymbol{q}_1 & \boldsymbol{q}_2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$.
+			(الف) درایه‌های قطری نتیجه می‌دهند $\boldsymbol{q}_1^T\boldsymbol{q}_1 = 1$ و $\boldsymbol{q}_2^T\boldsymbol{q}_2=1$: بردارهای یکه.
+			(ب) درایه غیرقطری $\boldsymbol{q}_1^T\boldsymbol{q}_2=0$ است (و به طور کلی $\boldsymbol{q}_i^T\boldsymbol{q}_j=0$).
+			(ج) مثال اصلی برای Q، ماتریس دوران $\begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$ است.
+		\end{enumerate}
+	}
+\end{document}

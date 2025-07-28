@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           LaTeX Code for Problem Set 1.3           %
+%             Translated to Persian (Farsi)          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+
+% --- Preamble ---
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Title setup
+\title{ترجمه پاسخنامه مجموعه مسائل ۱.۳}
+\author{صفحه ۲۹}
+\date{}
+
+
+% --- Document Body ---
+\begin{document}
+	\maketitle
+	\RTL{
+		
+		\section*{مجموعه مسائل ۱.۳، صفحه ۲۹}
+		\begin{enumerate}
+			\item $3s_1+4s_2+5s_3=(3,7,12)$. همین بردار $b$ از حاصلضرب ماتریس $S$ در بردار $x=(3,4,5)$ به دست می‌آید:
+			\[
+			\begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix}
+			\begin{bmatrix} 3 \\ 4 \\ 5 \end{bmatrix} =
+			\begin{bmatrix} (\text{سطر ۱}) \cdot x \\ (\text{سطر ۲}) \cdot x \\ (\text{سطر ۳}) \cdot x \end{bmatrix} =
+			\begin{bmatrix} 3 \\ 7 \\ 12 \end{bmatrix}
+			\]
+			
+			\item جواب‌ها عبارتند از $y_1=1, y_2=0, y_3=0$ (سمت راست = ستون اول) و $y_1=1, y_2=3, y_3=5$. آن مثال دوم نشان می‌دهد که مجموع $n$ عدد فرد اول برابر با $n^2$ است.
+			
+			\item
+			\[
+			\begin{aligned}
+				y_1 &= B_1 \\
+				y_1+y_2 &= B_2 \\
+				y_1+y_2+y_3 &= B_3
+			\end{aligned}
+			\quad \text{می‌دهد} \quad
+			\begin{aligned}
+				y_1 &= B_1 \\
+				y_2 &= -B_1+B_2 \\
+				y_3 &= -B_2+B_3
+			\end{aligned}
+			=
+			\begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix}
+			\begin{bmatrix} B_1 \\ B_2 \\ B_3 \end{bmatrix}
+			\]
+			معکوس ماتریس $S = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix}$ ماتریس $A = \begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix}$ است: ستون‌ها در $A$ و $S$ مستقل هستند!
+			
+			\item ترکیب $0w_1+0w_2+0w_3$ همیشه بردار صفر را می‌دهد، اما این مسئله به دنبال ترکیب‌های غیر صفر دیگری است (در این صورت بردارها وابسته هستند و در یک صفحه قرار می‌گیرند): $w_2=(w_1+w_3)/2$ بنابراین یک ترکیبی که حاصل آن صفر است $w_1-2w_2+w_3=0$ می‌باشد.
+			
+			\item سطرهای ماتریس ۳ در ۳ در مسئله ۴ نیز باید وابسته باشند: $r_2 = \frac{1}{2}(r_1+r_3)$. ترکیب‌های ستونی و سطری که حاصل صفر می‌دهند یکسان هستند: این غیرمعمول است. دو جواب برای $y_1r_1+y_2r_2+y_3r_3=0$ عبارتند از $(Y_1,Y_2,Y_3)=(1,-2,1)$ و $(2,-4,2)$.
+			
+			\item 
+			برای $c=3$: $\begin{bmatrix} 1 & 1 & 0 \\ 3 & 2 & 1 \\ 7 & 4 & 3 \end{bmatrix}$ ستون ۳ = ستون ۱ - ستون ۲ \\
+			برای $c=-1$: $\begin{bmatrix} 1 & 0 & -1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}$ ستون ۳ = -ستون ۱ + ستون ۲ \\
+			برای $c=0$: $\begin{bmatrix} 0 & 0 & 0 \\ 2 & 1 & 5 \\ 3 & 3 & 6 \end{bmatrix}$ ستون ۳ = ۳(ستون ۱) - ستون ۲
+		\end{enumerate}
+		
+		\subsection*{راه حل تمرینات ۱۰}
+		\begin{enumerate}
+			\setcounter{enumi}{6}
+			\item هر سه سطر بر جواب $x$ عمود هستند (سه معادله $r_1 \cdot x = 0$ و $r_2 \cdot x = 0$ و $r_3 \cdot x = 0$ این را به ما می‌گویند). در نتیجه کل صفحه‌ی سطرها بر $x$ عمود است.
+			
+			\item
+			\[
+			\begin{aligned}
+				x_1 - 0 &= b_1 \\
+				x_2 - x_1 &= b_2 \\
+				x_3 - x_2 &= b_3 \\
+				x_4 - x_3 &= b_4
+			\end{aligned}
+			\quad \implies \quad
+			\begin{aligned}
+				x_1 &= b_1 \\
+				x_2 &= b_1+b_2 \\
+				x_3 &= b_1+b_2+b_3 \\
+				x_4 &= b_1+b_2+b_3+b_4
+			\end{aligned}
+			=
+			\begin{bmatrix} 1 & 0 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 1 & 1 & 1 & 0 \\ 1 & 1 & 1 & 1 \end{bmatrix}
+			\begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ b_4 \end{bmatrix} = A^{-1}b
+			\]
+			
+			\item ماتریس تفاضل چرخشی $C$ یک خط از جواب‌ها (در فضای ۴ بعدی) برای $Cx=0$ دارد:
+			\[
+			\begin{bmatrix} 1 & 0 & 0 & -1 \\ -1 & 1 & 0 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 0 & -1 & 1 \end{bmatrix}
+			\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} =
+			\begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+			\quad \text{وقتی} \quad x = \begin{bmatrix} c \\ c \\ c \\ c \end{bmatrix}
+			\]
+			
+			\item
+			\[
+			\begin{aligned}
+				z_2 - z_1 &= b_1 \\
+				z_3 - z_2 &= b_2 \\
+				0 - z_3 &= b_3
+			\end{aligned}
+			\quad \implies \quad
+			\begin{aligned}
+				z_1 &= -b_1-b_2-b_3 \\
+				z_2 &= -b_2-b_3 \\
+				z_3 &= -b_3
+			\end{aligned}
+			=
+			\begin{bmatrix} -1 & -1 & -1 \\ 0 & -1 & -1 \\ 0 & 0 & -1 \end{bmatrix}
+			\begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix} = \Delta^{-1}b
+			\]
+			
+			\item تفاضل‌های پیشروی توان‌های دوم برابر است با $(t+1)^2 - t^2 = 2t+1$. تفاضل‌های توان $n$ام برابر است با $(t+1)^n - t^n = nt^{n-1} + \dots$. جمله پیشرو، مشتق $nt^{n-1}$ است.
+			
+			\item به نظر می‌رسد ماتریس‌های تفاضل مرکزی با اندازه زوج، معکوس‌پذیر هستند.
+			\[
+			\begin{bmatrix} 0 & 1 & 0 & 0 \\ -1 & 0 & 1 & 0 \\ 0 & -1 & 0 & 1 \\ 0 & 0 & -1 & 0 \end{bmatrix}
+			\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} =
+			\begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ b_4 \end{bmatrix}
+			\implies
+			\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} =
+			\begin{bmatrix} -b_2-b_4 \\ b_1 \\ -b_4 \\ b_1+b_3 \end{bmatrix}
+			\]
+			
+			\item اندازه فرد: پنج معادله تفاضل مرکزی منجر به $b_1+b_3+b_5=0$ می‌شود. با جمع معادلات ۱، ۳ و ۵، سمت چپ صفر و سمت راست $b_1+b_3+b_5$ می‌شود. پس جوابی وجود ندارد مگر اینکه $b_1+b_3+b_5=0$.
+			
+			\item یک مثال $(a,b)=(3,6)$ و $(c,d)=(1,2)$ است. اگر $a/c = b/d$ باشد، آنگاه $ad=bc$. با تقسیم بر $bd$ نتیجه می‌شود که $a/b=c/d$.
+			
+		\end{enumerate}
+		
+	}
+\end{document}

@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           LaTeX Code for Problem Set 2.4           %
+%             Translated to Persian (Farsi)          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+
+% --- Preamble ---
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Title setup
+\title{ترجمه پاسخنامه مجموعه مسائل ۲.۴}
+\author{صفحه ۷۷}
+\date{}
+
+
+% --- Document Body ---
+\begin{document}
+	\maketitle
+	\RTL{
+		
+		\section*{مجموعه مسائل ۲.۴، صفحه ۷۷}
+		\begin{enumerate}
+			\item اگر تمام درایه‌های A، B، C و D برابر با ۱ باشند، آنگاه BA ماتریسی ۵×۵ با تمام درایه‌های ۳ است؛ AB ماتریسی ۳×۳ با تمام درایه‌های ۵ است؛ ABD ماتریسی ۳×۱ با تمام درایه‌های ۱۵ است. DC و A(B+C) تعریف نشده‌اند.
+			
+			\item (الف) A(ستون دوم B) (ب) (سطر اول A)B (ج) (سطر سوم A)(ستون پنجم B) (د) (سطر اول C)D(ستون اول E). (بخش (ج) فرض کرده است که B دارای ۵ ستون است).
+			
+			\item $AB+AC$ همانند $A(B+C)= \begin{bmatrix} 3 & 8 \\ 6 & 9 \end{bmatrix}$ است. (قانون توزیع‌پذیری).
+			
+			\item A(BC)=(AB)C طبق قانون شرکت‌پذیری. در این مثال هر دو پاسخ برابر $\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$ هستند. ستون ۱ از AB و سطر ۲ از C صفر هستند (سپس ستون‌ها را در سطرها ضرب کنید).
+			
+			\item (الف) $A^2 = \begin{bmatrix} 1 & 2b \\ 0 & 1 \end{bmatrix}$ و $A^n = \begin{bmatrix} 1 & nb \\ 0 & 1 \end{bmatrix}$. (ب) $A^2 = \begin{bmatrix} 4 & 4 \\ 0 & 0 \end{bmatrix}$ و $A^n = \begin{bmatrix} 2^n & 2^n \\ 0 & 0 \end{bmatrix}$.
+			
+			\item $(A+B)^2 = \begin{bmatrix} 10 & 4 \\ 6 & 6 \end{bmatrix} = A^2+AB+BA+B^2$. اما $A^2+2AB+B^2 = \begin{bmatrix} 16 & 2 \\ 3 & 0 \end{bmatrix}$.
+			
+			\item (الف) صحیح (ب) غلط (ج) صحیح (د) غلط: معمولاً $(AB)^2 = ABAB \neq A^2B^2$.
+			
+			\item سطرهای DA برابر با ۳(سطر ۱ از A) و ۵(سطر ۲ از A) هستند. هر دو سطر EA برابر سطر ۲ از A هستند. ستون‌های AD برابر با ۳(ستون ۱ از A) و ۵(ستون ۲ از A) هستند. ستون اول AE صفر است، ستون دوم برابر با ستون ۱ از A + ستون ۲ از A است.
+			
+			\item $AF = \begin{bmatrix} a & a+b \\ c & c+d \end{bmatrix}$ و E(AF) برابر با (EA)F است زیرا ضرب ماتریس‌ها شرکت‌پذیر است.
+			
+			\item $FA = \begin{bmatrix} a+c & b+d \\ c & d \end{bmatrix}$ و سپس $E(FA) = \begin{bmatrix} a+c & b+d \\ a+2c & b+2d \end{bmatrix}$. عبارت E(FA) با F(EA) یکسان نیست زیرا ضرب جابجایی‌پذیر نیست: $EF \neq FE$.
+			
+			\item فرض کنید EA عملیات سطری را انجام می‌دهد و سپس (EA)F عملیات ستونی را انجام می‌دهد (زیرا F از سمت راست ضرب می‌شود). قانون شرکت‌پذیری می‌گوید که (EA)F = E(AF) بنابراین عملیات ستونی می‌تواند اول انجام شود!
+			
+			\item (الف) $B=4I$ (ب) $B=0$ (ج) $B = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}$ (د) هر سطر از B برابر ۱، ۰، ۰ است.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{12}
+			\item $AB = \begin{bmatrix} a & 0 \\ c & 0 \end{bmatrix} = BA = \begin{bmatrix} a & b \\ 0 & 0 \end{bmatrix}$ نتیجه می‌دهد $b=c=0$. سپس $AC=CA$ نتیجه می‌دهد $a=d$. تنها ماتریس‌هایی که با B و C (و تمام ماتریس‌های دیگر) جابجا می‌شوند، مضاربی از I هستند: $A=aI$.
+			
+			\item $(A-B)^2 = (B-A)^2 = A(A-B)-B(A-B) = A^2-AB-BA+B^2$. در یک حالت معمول (وقتی $AB \neq BA$) ماتریس $A^2-2AB+B^2$ با $(A-B)^2$ متفاوت است.
+			
+			\item (الف) صحیح ($A^2$ تنها زمانی تعریف می‌شود که A مربعی باشد).
+			(ب) غلط (اگر A از مرتبه m×n و B از مرتبه n×m باشد، آنگاه AB از مرتبه m×m و BA از مرتبه n×n است).
+			(ج) صحیح به استناد بخش (ب).
+			(د) غلط (B=0 را در نظر بگیرید).
+			
+			\item (الف) mn (از هر درایه A استفاده کنید) (ب) mnp (برابر است با p × بخش الف) (ج) $n^3$ (شامل $n^2$ ضرب داخلی).
+			
+			\item (الف) فقط از ستون ۲ ماتریس B استفاده کنید (ب) فقط از سطر ۲ ماتریس A استفاده کنید (ج)–(د) از سطر ۲ اولین ماتریس A استفاده کنید.
+			ستون ۲ از $AB = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$، سطر ۲ از $AB = [1, 0, 0]$، سطر ۲ از $A^2 = [0, 1]$، سطر ۲ از $A^3 = [3, -2]$.
+			
+			\item $A = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3 \end{bmatrix}$ دارای $a_{ij} = \min(i,j)$ است. $A = \begin{bmatrix} 1 & -1 & 1 \\ -1 & 1 & -1 \\ 1 & -1 & 1 \end{bmatrix}$ دارای $a_{ij} = (-1)^{i+j}$ است (ماتریس علامت متناوب). $A = \begin{bmatrix} 1/1 & 1/2 & 1/3 \\ 2/1 & 2/2 & 2/3 \\ 3/1 & 3/2 & 3/3 \end{bmatrix}$ دارای $a_{ij} = i/j$ است. این مثالی از یک ماتریس رتبه یک خواهد بود: ۱ ستون $\begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}$ در ۱ سطر $\begin{pmatrix} 1 & 1/2 & 1/3 \end{pmatrix}$ ضرب می‌شود.
+			
+			\item ماتریس قطری، پایین‌مثلثی، متقارن، تمام سطرها برابر. ماتریس صفر در هر چهار دسته قرار می‌گیرد.
+			
+			\item (الف) $a_{11}$ (ب) $l_{31} = a_{31}/a_{11}$ (ج) $a_{32} - \frac{a_{31}}{a_{11}}a_{12}$ (د) $a_{22} - \frac{a_{21}}{a_{11}}a_{12}$.
+		\end{enumerate}
+		
+
+		\begin{enumerate}
+			\setcounter{enumi}{20}
+			\item $A^2 = \begin{bmatrix} 0 & 0 & 4 & 0 \\ 0 & 0 & 0 & 4 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$, $A^3 = \begin{bmatrix} 0 & 0 & 0 & 8 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$, $A^4=$ ماتریس صفر برای A اکیداً مثلثی.
+			آنگاه $Av = A \begin{bmatrix} x \\ y \\ z \\ t \end{bmatrix} = \begin{bmatrix} 2y \\ 2z \\ 2t \\ 0 \end{bmatrix}$, $A^2v = \begin{bmatrix} 4z \\ 4t \\ 0 \\ 0 \end{bmatrix}$, $A^3v = \begin{bmatrix} 8t \\ 0 \\ 0 \\ 0 \end{bmatrix}$, $A^4v=0$.
+			
+			\item $A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$ دارای $A^2=-I$ است؛ $BC = \begin{bmatrix} 1 & -1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$؛ $DE = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} = \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} = -ED$. شما می‌توانید مثال‌های بیشتری پیدا کنید.
+			
+			\item $A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ دارای $A^2=0$ است. توجه: هر ماتریس $A = \text{ستون} \times \text{سطر} = uv^T$ دارای $A^2=uv^Tuv^T=0$ خواهد بود اگر $v^Tu=0$. $A = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix}$ دارای $A^2 = \begin{bmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ است اما $A^3=0$؛ اکیداً مثلثی مانند مسئله ۲۱.
+			
+			\item $(A_1)^n = \begin{bmatrix} 2^n & 2^{n-1} \\ 0 & 1 \end{bmatrix}$, $(A_2)^n = 2^{n-1}\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, $(A_3)^n = \begin{bmatrix} a^n & a^{n-1}b \\ 0 & 0 \end{bmatrix}$.
+			
+			\item $\begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} a \\ d \\ g \end{bmatrix} [1,0,0] + \begin{bmatrix} b \\ e \\ h \end{bmatrix} [0,1,0] + \begin{bmatrix} c \\ f \\ i \end{bmatrix} [0,0,1]$.
+		\end{enumerate}
+		
+	
+		\begin{enumerate}
+			\setcounter{enumi}{25}
+			\item ستون‌های A ضربدر سطرهای B:
+			$\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} [3,3,0] + \begin{bmatrix} 0 \\ 4 \\ 1 \end{bmatrix} [1,2,1] = \begin{bmatrix} 3 & 3 & 0 \\ 6 & 6 & 0 \\ 6 & 6 & 0 \end{bmatrix} + \begin{bmatrix} 0 & 0 & 0 \\ 4 & 8 & 4 \\ 1 & 2 & 1 \end{bmatrix} = \begin{bmatrix} 3 & 3 & 0 \\ 10 & 14 & 4 \\ 7 & 8 & 1 \end{bmatrix} = AB$.
+			
+			\item (الف) (سطر ۳ از A) ⋅ (ستون ۱ یا ۲ از B) و (سطر ۳ از A) ⋅ (ستون ۲ از B) همگی صفر هستند.
+			(ب) $\begin{bmatrix} x \\ x \\ 0 \end{bmatrix} [0,x,x] = \begin{bmatrix} 0 & x^2 & x^2 \\ 0 & x^2 & x^2 \\ 0 & 0 & 0 \end{bmatrix}$ و $\begin{bmatrix} x \\ x \\ x \end{bmatrix} [0,0,x] = \begin{bmatrix} 0 & 0 & x^2 \\ 0 & 0 & x^2 \\ 0 & 0 & x^2 \end{bmatrix}$: هر دو بالا مثلثی هستند.
+			
+			\item ضرب ماتریس A در B با برش‌ها:
+			(A با ۴ ستون)(B با ۲ سطر) غیرممکن. (A با ۲ سطر)(B با ۴ ستون) غیر ممکن. (A با ۳ ستون)(B با ۳ سطر) ممکن است.
+			
+			\item $E_{21} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$ و $E_{31} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ -4 & 0 & 1 \end{bmatrix}$ در درایه‌های (2,1) و (3,1) صفر تولید می‌کنند.
+			ماتریس‌های E را ضرب کنید تا $E = E_{31}E_{21} = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ -4 & 0 & 1 \end{bmatrix}$ به دست آید. سپس $EA = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 1 & 1 \\ 0 & 1 & 3 \end{bmatrix}$ نتیجه هر دو E است زیرا $(E_{31}E_{21})A = E_{31}(E_{21}A)$.
+			
+			\item در سوال ۲۹، $c = \begin{bmatrix} 2 \\ -8 \end{bmatrix}$، $D = \begin{bmatrix} 3 & 4 \\ 5 & 6 \end{bmatrix}$ (فرض شده)، $D - \frac{cb^T}{a} = \begin{bmatrix} 3 & 4 \\ 5 & 6 \end{bmatrix} - \frac{1}{2}\begin{bmatrix} 2 \\ -8 \end{bmatrix}[1,0] = \begin{bmatrix} 3 & 4 \\ 5 & 6 \end{bmatrix} - \begin{bmatrix} 1 & 0 \\ -4 & 0 \end{bmatrix} = \begin{bmatrix} 2 & 4 \\ 9 & 6 \end{bmatrix}$. (توجه: متن اصلی ناقص بود، با فرض مقادیر معمول تکمیل شد).
+			
+			\item $\begin{bmatrix} A & -B \\ B & A \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} Ax-By \\ Bx+Ay \end{bmatrix}$ بخش حقیقی، بخش موهومی.
+			ضرب ماتریس مختلط در بردار مختلط به ۴ ضرب عدد حقیقی در عدد حقیقی نیاز دارد.
+			
+			\item A ضربدر $X=[x_1, x_2, x_3]$ برابر با ماتریس همانی $I=[Ax_1, Ax_2, Ax_3]$ خواهد بود.
+		\end{enumerate}
+		
+	
+		\begin{enumerate}
+			\setcounter{enumi}{32}
+			\item $b = \begin{bmatrix} 3 \\ 5 \\ 8 \end{bmatrix}$ نتیجه می‌دهد $x = 3x_1 + 5x_2 + 8x_3 = \begin{bmatrix} 3 \\ 8 \\ 16 \end{bmatrix}$؛ ماتریس $A = \begin{bmatrix} 1 & 0 & 0 \\ -1 & 1 & 0 \\ 0 & -1 & 1 \end{bmatrix}$ بردارهای $x_1=(1,1,1)^T, x_2=(0,1,1)^T, x_3=(0,0,1)^T$ را به عنوان ستون‌های «معکوس» خود $A^{-1}$ خواهد داشت.
+			
+			\item $A \cdot \text{ones} = \begin{bmatrix} a+b & a+b \\ c+d & c+d \end{bmatrix}$ با $\text{ones} \cdot A = \begin{bmatrix} a+c & b+d \\ a+c & b+d \end{bmatrix}$ زمانی برابر است که $b=c$ و $a+b=a+c$ (که همان است) و $c+d=b+d$ (که همان است). پس شرط لازم و کافی $b=c$ است.
+			
+			\item $S= \begin{bmatrix} 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 \end{bmatrix} , S^2= \begin{bmatrix} 2 & 0 & 2 & 0 \\ 0 & 2 & 0 & 2 \\ 2 & 0 & 2 & 0 \\ 0 & 2 & 0 & 2 \end{bmatrix}$. اینها ۱۶ مسیر ۲ مرحله‌ای را در گراف نشان می‌دهند.
+			
+			\item ضرب $AB = (m \times n)(n \times p)$ به $mnp$ عمل ضرب نیاز دارد. سپس $(AB)C$ به $mpq$ عمل ضرب بیشتر نیاز دارد. ضرب $BC = (n \times p)(p \times q)$ به $npq$ و سپس $A(BC)$ به $mnq$ عمل ضرب نیاز دارد.
+			(الف) اگر $m, n, p, q$ برابر با ۲, ۴, ۷, ۱۰ باشند، ما $(2)(4)(7) + (2)(7)(10) = 56 + 140 = 196$ را با $(4)(7)(10) + (2)(4)(10) = 280 + 80 = 360$ مقایسه می‌کنیم. بنابراین محاسبه (AB)C اول بهتر است.
+			(ب) اگر u, v, w بردارهای N×۱ باشند، آنگاه $(u^Tv)w^T$ به N (برای $u^Tv$) و سپس $N$ (برای ضرب اسکالر در $w^T$) عمل ضرب نیاز دارد، جمعاً 2N. اما $u^T(vw^T)$ برای یافتن ماتریس $N \times N$ یعنی $vw^T$ به $N^2$ و برای ضرب $u^T$ در آن به $N^2$ عمل ضرب دیگر نیاز دارد.
+			(ج) ما در حال مقایسه $mnp+mpq$ با $npq+mnq$ هستیم. تمام جملات را بر $mnpq$ تقسیم کنید: اکنون ما $q^{-1}+n^{-1}$ را با $m^{-1}+p^{-1}$ مقایسه می‌کنیم. این یک قانون ساده و مهم را به دست می‌دهد: اگر ماتریس‌های A و B در حال ضرب در v برای $ABv$ هستند، ابتدا ماتریس‌ها را ضرب نکنید. بهتر است ابتدا $Bv$ و سپس $A(Bv)$ را محاسبه کنید.
+		\end{enumerate}
+		
+	
+		\begin{enumerate}
+			\setcounter{enumi}{36}
+			\item اثبات $(AB)c = A(Bc)$ از قانون ستونی برای ضرب ماتریس استفاده کرد. «همین امر برای تمام ستون‌های دیگر C نیز صادق است.»
+			حتی برای تبدیلات غیرخطی، $A(B(c))$ «ترکیب» A با B خواهد بود (اعمال B و سپس A). این ترکیب $A \circ B$ برای ماتریس‌ها به سادگی به صورت AB نوشته می‌شود.
+			یکی از کاربردهای بسیار قانون شرکت‌پذیری: معکوس چپ B برابر با معکوس راست C است، زیرا $B = B(AC) = (BA)C = IC = C$.
+			
+			\item (الف) ستون‌های $a_1, ..., a_m$ را در سطرهای $a_1^T, ..., a_m^T$ ضرب کرده و ماتریس‌های حاصل (که رتبه یک دارند) را با هم جمع کنید.
+			(ب) $A^TCA = c_1a_1a_1^T + \dots + c_ma_ma_m^T$. ماتریس قطری C این عبارت را مرتب و ساده می‌کند.
+		\end{enumerate}
+		
+	}
+\end{document}

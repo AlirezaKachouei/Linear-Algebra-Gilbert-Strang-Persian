@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           LaTeX Code for Problem Set 2.6           %
+%             Translated to Persian (Farsi)          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+
+% --- Preamble ---
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Title setup
+\title{ترجمه پاسخنامه مجموعه مسائل ۲.۶}
+\author{صفحه ۱۰۴}
+\date{}
+
+
+% --- Document Body ---
+\begin{document}
+	\maketitle
+	\RTL{
+		
+		\section*{مجموعه مسائل ۲.۶، صفحه ۱۰۴}
+		\begin{enumerate}
+			\item ضریب $\ell_{21}=1$ سطر ۱ را ضرب کرد؛ $L = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}$ ضربدر $U\boldsymbol{x} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix} = \boldsymbol{c}$ همان $A\boldsymbol{x}=\boldsymbol{b} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 7 \end{bmatrix}$ است. به صورت حروفی، L در $U\boldsymbol{x}=\boldsymbol{c}$ ضرب می‌شود تا $A\boldsymbol{x}=\boldsymbol{b}$ را بدهد.
+			
+			\item $L\boldsymbol{c}=\boldsymbol{b}$ به صورت $\begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \end{bmatrix} = \begin{bmatrix} 5 \\ 7 \end{bmatrix}$ است که با پیشروی حذف، با $\boldsymbol{c}=\begin{bmatrix} 5 \\ 2 \end{bmatrix}$ حل می‌شود. $U\boldsymbol{x}=\boldsymbol{c}$ به صورت $\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}$ است که با جایگذاری پس‌رو، با $\boldsymbol{x}=\begin{bmatrix} 3 \\ 2 \end{bmatrix}$ حل می‌شود.
+			
+			\item $\ell_{31}=1$ و $\ell_{32}=2$ (و $\ell_{33}=1$): مراحل را معکوس کنید تا از $U\boldsymbol{x}=\boldsymbol{c}$ به $A\boldsymbol{x}=\boldsymbol{b}$ برسید:
+			۱ برابرِ $(x+y+z=5)$ + ۲ برابرِ $(y+2z=2)$ + ۱ برابرِ $(z=2)$ نتیجه می‌دهد $x+3y+6z=11$.
+			
+			\item $L\boldsymbol{c} = \begin{bmatrix} 1 & & \\ 1 & 1 & \\ 1 & 2 & 1 \end{bmatrix} \begin{bmatrix} 5 \\ 2 \\ 2 \end{bmatrix} = \begin{bmatrix} 5 \\ 7 \\ 11 \end{bmatrix}$; $U\boldsymbol{x} = \begin{bmatrix} 1 & 1 & 1 \\ & 1 & 2 \\ & & 1 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 5 \\ 2 \\ 2 \end{bmatrix}$; $\boldsymbol{x} = \begin{bmatrix} 5 \\ -2 \\ 2 \end{bmatrix}$.
+			
+			\item $EA = \begin{bmatrix} 1 & & \\ 0 & 1 & \\ -3 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 & 0 \\ 0 & 4 & 2 \\ 6 & 3 & 5 \end{bmatrix} = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 4 & 2 \\ 0 & 0 & 5 \end{bmatrix} = U$. با در نظر گرفتن $E^{-1}$ به عنوان L، داریم $A=LU = \begin{bmatrix} 1 & & \\ 0 & 1 & \\ 3 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 & 0 \\ 0 & 4 & 2 \\ 0 & 0 & 5 \end{bmatrix} = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 4 & 2 \\ 6 & 3 & 5 \end{bmatrix}$.
+			
+			\item $\begin{bmatrix} 1 & & \\ 0 & 1 & \\ 0 & -2 & 1 \end{bmatrix} \begin{bmatrix} 1 & & \\ -2 & 1 & \\ 0 & 0 & 1 \end{bmatrix} A = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 2 & 3 \\ 0 & 0 & -6 \end{bmatrix} = U$. آنگاه $A = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix} U$ همان $E_{21}^{-1}E_{32}^{-1}U = LU$ است. ضرایب $\ell_{21}=\ell_{32}=2$ در L سر جای خود قرار می‌گیرند.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{6}
+			\item $E_{32}E_{31}E_{21}A = \begin{bmatrix} 1 & & \\ & 1 & \\ & -2 & 1 \end{bmatrix} \begin{bmatrix} 1 & & \\ & 1 & \\ -3 & & 1 \end{bmatrix} \begin{bmatrix} 1 & & \\ -2 & 1 & \\ & & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 2 & 2 & 2 \\ 3 & 4 & 5 \end{bmatrix}$. این حاصل برابر است با $\begin{bmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \\ 0 & 0 & 2 \end{bmatrix} = U$. آن ضرایب ۲، ۳، ۲ را در L قرار دهید. آنگاه $A = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 3 & 2 & 1 \end{bmatrix} U = LU$.
+			
+			\item $E = E_{32}E_{31}E_{21} = \begin{bmatrix} 1 & & \\ -a & 1 & \\ ac-b & -c & 1 \end{bmatrix}$ ترکیبی است اما L برابر است با $E_{21}^{-1}E_{31}^{-1}E_{32}^{-1} = \begin{bmatrix} 1 & & \\ a & 1 & \\ b & c & 1 \end{bmatrix}$.
+			
+			\item برای حالت ۲×۲: $d=0$ مجاز نیست؛ $\begin{bmatrix} 1 & 1 & 0 \\ 1 & 1 & 2 \\ 1 & 2 & 1 \end{bmatrix} = \begin{bmatrix} 1 & & \\ \ell & 1 & \\ m & n & 1 \end{bmatrix} \begin{bmatrix} d & e & g \\ & f & h \\ & & i \end{bmatrix}$. داریم $d=1, e=1$ و سپس $\ell=1$. اما در مرحله بعد $f=0$ به دست می‌آید که مجاز نیست. محوری در سطر ۲ وجود ندارد.
+			
+			\item $c=2$ منجر به صفر در جایگاه محور دوم می‌شود: سطرها را جابجا کنید و ماتریس منفرد نخواهد بود. $c=1$ منجر به صفر در جایگاه محور سوم می‌شود. در این حالت ماتریس منفرد است.
+			
+			\item ماتریس $A = \begin{bmatrix} 2 & 4 & 8 \\ 0 & 3 & 9 \\ 0 & 0 & 7 \end{bmatrix}$ دارای $L=I$ است (A از قبل بالا مثلثی است) و $D = \begin{bmatrix} 2 & & \\ & 3 & \\ & & 7 \end{bmatrix}$؛ در تجزیه $A=LU$ ماتریس $U=A$ است؛ در تجزیه $A=LDU$ ماتریس $U = D^{-1}A = \begin{bmatrix} 1 & 2 & 4 \\ 0 & 1 & 3 \\ 0 & 0 & 1 \end{bmatrix}$ با درایه‌های ۱ روی قطر است.
+			
+			\item $A = \begin{bmatrix} 2 & 4 \\ 4 & 11 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 2 & 4 \\ 0 & 3 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 0 & 3 \end{bmatrix} \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} = LDU$.
+			برای ماتریس دوم، $A=LDL^T$ به صورت $\begin{bmatrix} 1 & & \\ 4 & 1 & \\ 0 & -1 & 1 \end{bmatrix} \begin{bmatrix} 1 & & \\ & -4 & \\ & & 4 \end{bmatrix} \begin{bmatrix} 1 & 4 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \end{bmatrix}$ است.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{12}
+			\item $\begin{bmatrix} a & a & a & a \\ a & b & b & b \\ a & b & c & c \\ a & b & c & d \end{bmatrix} = \begin{bmatrix} 1 & & & \\ 1 & 1 & & \\ 1 & 1 & 1 & \\ 1 & 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} a & a & a & a \\ & b-a & b-a & b-a \\ & & c-b & c-b \\ & & & d-c \end{bmatrix}$.
+			برای وجود تجزیه، باید محورها ناصفر باشند: $a \neq 0$, $b \neq a$, $c \neq b$, $d \neq c$.
+			
+			\item $\begin{bmatrix} a & r & r & r \\ a & b & s & s \\ a & b & c & t \\ a & b & c & d \end{bmatrix} = \begin{bmatrix} 1 & & & \\ 1 & 1 & & \\ 1 & 1 & 1 & \\ 1 & 1 & 1 & 1 \end{bmatrix} \begin{bmatrix} a & r & r & r \\ & b-r & s-r & s-r \\ & & c-s & t-s \\ & & & d-t \end{bmatrix}$.
+			باید محورها ناصفر باشند: $a \neq 0$, $b \neq r$, $c \neq s$, $d \neq t$.
+			
+			\item $\begin{bmatrix} 1 & 0 \\ 4 & 1 \end{bmatrix} \boldsymbol{c} = \begin{bmatrix} 2 \\ 11 \end{bmatrix}$ نتیجه می‌دهد $\boldsymbol{c} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}$. سپس $\begin{bmatrix} 2 & 4 \\ 0 & 1 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}$ نتیجه می‌دهد $\boldsymbol{x} = \begin{bmatrix} -5 \\ 3 \end{bmatrix}$.
+			$A\boldsymbol{x}=\boldsymbol{b}$ به صورت $\begin{bmatrix} 2 & 4 \\ 8 & 17 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 2 \\ 11 \end{bmatrix}$ است. با حذف به $\begin{bmatrix} 2 & 4 \\ 0 & 1 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \boldsymbol{c}$ می‌رسیم.
+			
+			\item $\begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{bmatrix} \boldsymbol{c} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}$ نتیجه می‌دهد $\boldsymbol{c} = \begin{bmatrix} 4 \\ 1 \\ 1 \end{bmatrix}$. سپس $\begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 4 \\ 1 \\ 1 \end{bmatrix}$ نتیجه می‌دهد $\boldsymbol{x} = \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}$.
+			اینها همان حذف پیش‌رو و جایگذاری پس‌رو برای $\begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 2 \\ 1 & 2 & 3 \end{bmatrix} \boldsymbol{x} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}$ هستند.
+			
+			\item (الف) L به I می‌رود (ب) I به $L^{-1}$ می‌رود (ج) LU به U می‌رود. عملیات حذف یعنی ضرب کردن در $L^{-1}$!
+			
+			\item (الف) $LDU=L_1D_1U_1$ را در معکوس‌ها ضرب کنید تا $L_1^{-1}LD = D_1U_1U^{-1}$ به دست آید. سمت چپ پایین‌مثلثی و سمت راست بالا‌مثلثی است $\Rightarrow$ هر دو طرف قطری هستند.
+			(ب) L, U, $L_1$, $U_1$ دارای درایه‌های قطری ۱ هستند، بنابراین $D=D_1$. آنگاه $L_1^{-1}L$ و $U_1U^{-1}$ هر دو برابر I هستند.
+			
+			\item $\begin{bmatrix} 1 & & \\ 1 & 1 & \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \\ & 1 & 1 \\ & & 1 \end{bmatrix} = LIU$;
+			$\begin{bmatrix} a & a & 0 \\ a & a+b & b \\ 0 & b & b+c \end{bmatrix} = L \begin{bmatrix} a & & \\ & b & \\ & & c \end{bmatrix} U$.
+			یک ماتریس سه‌قطری A دارای عامل‌های دوقطری L و U است.
+		\end{enumerate}
+		
+		
+		\begin{enumerate}
+			\setcounter{enumi}{19}
+			\item یک ماتریس سه‌قطری T در سطر محوری ۲ درایه غیرصفر دارد و تنها یک درایه غیرصفر زیر محور قرار دارد (یک عمل برای یافتن $\ell$ و سپس یک عمل برای محور جدید!). فقط 2n عمل برای حذف روی یک ماتریس سه‌قطری لازم است. T برابر است با L دوقطری ضربدر U دوقطری.
+			
+			\item برای ماتریس اول A، ماتریس L سه صفر ابتدای سطرها را حفظ می‌کند. اما U ممکن است صفر بالایی را در جایی که $A_{24}=0$ است، نداشته باشد. برای ماتریس دوم B، ماتریس L صفر پایین-چپ را در ابتدای سطر ۴ حفظ می‌کند. U صفر بالا-راست را در ابتدای ستون ۴ حفظ می‌کند. یک صفر در A و دو صفر در B پر می‌شوند.
+			
+			\item با حذف به سمت بالا، $\begin{bmatrix} 5 & 3 & 1 \\ 3 & 3 & 1 \\ 1 & 1 & 1 \end{bmatrix} \to \begin{bmatrix} 4 & 2 & 0 \\ 2 & 2 & 0 \\ 1 & 1 & 1 \end{bmatrix} \to \begin{bmatrix} 2 & 0 & 0 \\ 2 & 2 & 0 \\ 1 & 1 & 1 \end{bmatrix} = L$. به یک ماتریس پایین‌مثلثی L می‌رسیم و ضرایب در یک ماتریس بالا‌مثلثی U قرار دارند. $A=UL$ با $U = \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix}$.
+			
+			\item زیرماتریس بالا ۲×۲ یعنی $A_2$ دو محور اول ۵ و ۹ را دارد. دلیل: حذف روی A از گوشه بالا سمت چپ با حذف روی $A_2$ شروع می‌شود.
+			
+			\item بلوک‌های بالا سمت چپ همزمان با A تجزیه می‌شوند: $A_k = L_kU_k$. بنابراین $A=LU$ تنها در صورتی ممکن است که تمام آن بلوک‌های $A_k$ معکوس‌پذیر باشند.
+			
+			\item درایه (i,j) از $L^{-1}$ برای $i \ge j$ برابر $j/i$ است. و درایه $L^{-1}_{i,i-1}$ زیر قطر برابر $(1-i)/i$ است.
+			
+			\item $(K^{-1})_{ij} = j(n-i+1)/(n+1)$ برای $i \ge j$ (و متقارن است): $K^{-1}$ را در $n+1$ (دترمینان K) ضرب کنید تا همه اعداد صحیح را ببینید.
+		\end{enumerate}
+		
+	}
+\end{document}

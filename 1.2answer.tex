@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           LaTeX Code for Problem Set 1.2           %
+%             Translated to Persian (Farsi)          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{article}
+
+% --- Preamble ---
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% For better vector norms
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Title setup
+\title{ترجمه پاسخنامه مجموعه مسائل ۱.۲}
+\author{صفحه ۱۸}
+\date{}
+
+
+% --- Document Body ---
+\begin{document}
+	\maketitle
+	\RTL{
+		
+		\section*{مجموعه مسائل ۱.۲، صفحه ۱۸}
+		\begin{enumerate}
+			\item $u \cdot v = (-2.4) + 2.4 = 0$, $u \cdot w = (-0.6) + 1.6 = 1$, $u \cdot (v+w) = u \cdot v + u \cdot w = 0+1=1$, $w \cdot v = 4+6=10 = v \cdot w$.
+			
+			\item $\norm{u}=1$ و $\norm{v}=5$ و $\norm{w}=\sqrt{5}$. آنگاه $|u \cdot v| = 0 < (1)(5)$ و $|v \cdot w| = 10 < 5\sqrt{5}$، که نامساوی شوارتز را تأیید می‌کند.
+			
+			\item بردارهای یکه $v/\norm{v} = (\frac{4}{5}, \frac{3}{5}) = (0.8, 0.6)$. بردارهای $w, (2,-1)$ و $-w$ با $w$ زوایای $0^\circ, 90^\circ, 180^\circ$ می‌سازند. کسینوس زاویه $\theta$ برابر است با $\frac{v \cdot w}{\norm{v} \norm{w}} = \frac{10}{5\sqrt{5}} = \frac{2}{\sqrt{5}}$.
+			
+			\item (الف) $v \cdot (-v) = -1$ (ب) $(v+w) \cdot (v-w) = v \cdot v + w \cdot v - v \cdot w - w \cdot w = 1 - 1 = 0$ بنابراین $\theta = 90^\circ$ (توجه کنید که $v \cdot w = w \cdot v$) (ج) $(v-2w) \cdot (v+2w) = v \cdot v - 4w \cdot w = 1-4 = -3$.
+			
+			\item $u_1 = v/\norm{v} = (1,3)/\sqrt{10}$ و $u_2 = w/\norm{w} = (2,1,2)/3$. بردار $U_1 = (3,-1)/\sqrt{10}$ بر $u_1$ عمود است (و همچنین $(-3,1)/\sqrt{10}$). بردار $U_2$ می‌تواند $(1,-2,0)/\sqrt{5}$ باشد: یک صفحه کامل از بردارها بر $u_2$ عمود هستند، و یک دایره کامل از بردارهای یکه در آن صفحه وجود دارد.
+			
+			\item تمام بردارهای $w = (c, 2c)$ بر $v$ عمود هستند. آنها روی یک خط قرار دارند. تمام بردارهای $(x,y,z)$ که $x+y+z=0$ روی یک صفحه قرار دارند. تمام بردارهای عمود بر $(1,1,1)$ و $(1,2,3)$ روی یک خط در فضای سه‌بعدی قرار دارند.
+			
+			\item (الف) $\cos\theta = \frac{1}{(2)(1)}$ پس $\theta=60^\circ$ یا $\pi/3$ رادیان. (ب) $\cos\theta = 0$ پس $\theta=90^\circ$ یا $\pi/2$ رادیان. (ج) $\cos\theta = \frac{2}{(2)(2)} = \frac{1}{2}$ پس $\theta=60^\circ$ یا $\pi/3$ رادیان. (د) $\cos\theta = -1/\sqrt{2}$ پس $\theta=135^\circ$ یا $3\pi/4$ رادیان.
+			
+			\item (الف) غلط: $v$ و $w$ هر برداری در صفحه‌ی عمود بر $u$ هستند. (ب) صحیح: $u \cdot (v+2w) = u \cdot v + 2u \cdot w = 0$. (ج) صحیح: $\norm{u-v}^2 = (u-v) \cdot (u-v)$ به $u \cdot u + v \cdot v = 2$ تجزیه می‌شود وقتی $u \cdot v = v \cdot u = 0$.
+			
+			\item اگر $v_2w_2/v_1w_1 = -1$ باشد، آنگاه $v_2w_2 = -v_1w_1$ یا $v_1w_1 + v_2w_2 = v \cdot w = 0$: عمود هستند! بردارهای $(1,4)$ و $(1, -1/4)$ بر هم عمودند.
+		\end{enumerate}
+		
+		\subsection*{راه حل تمرینات ۶}
+		\begin{enumerate}
+			\setcounter{enumi}{9}
+			\item شیب‌های $2/1$ و $-1/2$ در هم ضرب شده و حاصل $-1$ می‌دهند: در این صورت $v \cdot w = 0$ و بردارها (جهت‌ها) عمود هستند.
+			
+			\item $v \cdot w < 0$ به این معناست که زاویه بزرگتر از $90^\circ$ است؛ این بردارهای $w$ نیمی از فضای سه‌بعدی را پر می‌کنند.
+			
+			\item بردار $(1,1)$ بر $(1,5)-c(1,1)$ عمود است اگر $(1,1) \cdot (1,5) - c(1,1) \cdot (1,1) = 6-2c = 0$ یا $c=3$. به طور کلی $v \cdot (w-cv) = 0$ است اگر $c = \frac{v \cdot w}{v \cdot v}$. کم کردن $cv$ کلید ساختن یک بردار عمود است.
+			
+			\item صفحه‌ی عمود بر $(1,0,1)$ شامل تمام بردارهای $(c,d,-c)$ است. در آن صفحه، $v=(1,0,-1)$ و $w=(0,1,0)$ بر هم عمود هستند.
+			
+			\item یک امکان از میان بسیاری: $u=(1,-1,0,0)$, $v=(0,0,1,-1)$, $w=(1,1,-1,-1)$ و $(1,1,1,1)$ بر یکدیگر عمود هستند.
+			
+			\item $\frac{1}{2}(x+y) = (2+8)/2 = 5$ و $5 > 4$. $\cos\theta = \frac{16}{\sqrt{10}\sqrt{10}} = \frac{8}{10}$.
+			
+			\item $\norm{v}^2 = 1+\dots+1=9$ پس $\norm{v}=3$؛ بردار $u=v/3 = (\frac{1}{3}, \dots, \frac{1}{3})$ یک بردار یکه در فضای ۹ بعدی است؛ $w=(1,-1,0,\dots,0)/\sqrt{2}$ یک بردار یکه در ابرصفحه ۸ بعدی عمود بر $v$ است.
+			
+			\item $\cos\alpha=1/\sqrt{2}, \cos\beta=0, \cos\gamma=-1/\sqrt{2}$. برای هر بردار $v=(v_1,v_2,v_3)$, $\cos^2\alpha+\cos^2\beta+\cos^2\gamma = (v_1^2+v_2^2+v_3^2)/\norm{v}^2 = 1$.
+			
+			\item $\norm{v}^2 = 4^2+2^2=20$ و $\norm{w}^2=(-1)^2+2^2=5$. قضیه فیثاغورس برای طول وتر $v+w=(3,4)$ به صورت $\norm{(3,4)}^2=25=20+5$ برقرار است.
+			
+			\item از قوانین (۱)، (۲)، (۳) برای $v \cdot w = w \cdot v$ و $u \cdot (v+w)$ و $(cv) \cdot w$ شروع کنید. طبق قانون (۲) داریم $(v+w) \cdot (v+w) = v \cdot v + v \cdot w + w \cdot v + w \cdot w = v \cdot v + 2v \cdot w + w \cdot w$. نکته اصلی این است که در باز کردن پرانتزها راحت باشید.
+			
+			\item می‌دانیم که $(v-w) \cdot (v-w) = v \cdot v - 2v \cdot w + w \cdot w$. قانون کسینوس‌ها به جای $v \cdot w$ عبارت $\norm{v} \norm{w} \cos\theta$ را قرار می‌دهد. وقتی $\theta < 90^\circ$ باشد، $v \cdot w$ مثبت است، بنابراین $v \cdot v + w \cdot w > \norm{v-w}^2$.
+		\end{enumerate}
+		
+		\subsection*{راه حل تمرینات ۷}
+		\begin{enumerate}
+			\setcounter{enumi}{20}
+			\item $2v \cdot w \le 2\norm{v} \norm{w}$ منجر به $\norm{v+w}^2 = v \cdot v + 2v \cdot w + w \cdot w \le \norm{v}^2 + 2\norm{v}\norm{w} + \norm{w}^2 = (\norm{v}+\norm{w})^2$. با جذر گرفتن، به $\norm{v+w} \le \norm{v}+\norm{w}$ می‌رسیم.
+			
+			\item $v_1^2w_1^2 + 2v_1w_1v_2w_2 + v_2^2w_2^2 \le v_1^2w_1^2 + v_1^2w_2^2 + v_2^2w_1^2 + v_2^2w_2^2$ صحیح است زیرا تفاضل آنها $(v_1w_2 - v_2w_1)^2 \ge 0$ می‌باشد.
+			
+			\item $\cos\beta = w_1/\norm{w}$ و $\sin\beta=w_2/\norm{w}$. آنگاه $\cos(\beta-\alpha) = \cos\beta\cos\alpha+\sin\beta\sin\alpha = \frac{v \cdot w}{\norm{v}\norm{w}} = \cos\theta$.
+			
+			\item مثال ۶ می‌دهد $|u_1||U_1| + |u_2||U_2| \le \frac{1}{2}(u_1^2+U_1^2) + \frac{1}{2}(u_2^2+U_2^2)$. این به $0.96 \le (0.6)(0.8)+(0.8)(0.6)$ تبدیل می‌شود که صحیح است: $0.96 < 1$.
+			
+			\item کسینوس $\theta$ برابر است با $x/\sqrt{x^2+y^2}$. آنگاه $|\cos\theta|^2 = x^2/(x^2+y^2) \le 1$.
+			
+			\item (با پوزش بابت آن غلط تایپی!) جمع این دو خط برابر با $2\norm{v}^2+2\norm{w}^2$ است:
+			\begin{align*}
+				\norm{v+w}^2 &= (v+w)\cdot(v+w) = v\cdot v + v\cdot w + w\cdot v + w\cdot w \\
+				\norm{v-w}^2 &= (v-w)\cdot(v-w) = v\cdot v - v\cdot w - w\cdot v + w\cdot w
+			\end{align*}
+			
+			\item بردارهای $w=(x,y)$ که $x+2y=5$ روی یک خط در صفحه xy قرار دارند. کوتاه‌ترین $w$ روی آن خط، $(1,2)$ است (با طول $\sqrt{5}$).
+			
+			\item طول $\norm{v-w}$ بین ۲ و ۸ است (نامساوی مثلث). حاصلضرب نقطه‌ای $v \cdot w$ بین $-15$ و $15$ است (نامساوی شوارتز).
+			
+			\item سه بردار در صفحه می‌توانند با یکدیگر زوایای بزرگتر از $90^\circ$ بسازند: مثلاً $(1,0), (-1,4), (-1,-4)$. چهار بردار نمی‌توانند. در $R^n$ پاسخ $n+1$ است.
+			
+			\item برای مثال $v=(1,2,-3)$ و $w=(-3,1,2)$. در این حالت $\cos\theta = \frac{-7}{\sqrt{14}\sqrt{14}} = -1/2$ و $\theta=120^\circ$. این همیشه زمانی رخ می‌دهد که $x+y+z=0$.
+			
+			\item اثبات نامساوی میانگین حسابی-هندسی: $G = \sqrt[3]{xyz} \le A=(x+y+z)/3$.
+			
+			\item ستون‌های «ماتریس آدامار» ۴ در ۴ (ضربدر $1/2$) بردارهای یکه عمود بر هم هستند:
+			\[ \frac{1}{2}H = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & -1 & 1 & -1 \\ 1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1 \end{pmatrix} \]
+			
+			\item دستورات MATLAB زیر ۳۰ بردار یکه تصادفی در ستون‌های ماتریس U ایجاد می‌کند: \\
+			\texttt{V=randn(3,30); D=sqrt(diag(V'*V)); U=V./D;}
+			
+		\end{enumerate}
+		
+	}
+\end{document}

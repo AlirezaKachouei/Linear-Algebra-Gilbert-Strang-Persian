@@ -1,0 +1,229 @@
+\documentclass[12pt, a4paper]{book}
+
+% فراخوانی بسته‌های لازم
+\usepackage{amsmath}         % برای فرمول‌های پیشرفته ریاضی
+\usepackage{amsfonts}        % بسته برای فونت‌های ریاضی مانند \mathbb
+\usepackage{amssymb}         % برای نمادهای بیشتر ریاضی
+\usepackage{graphicx}        % بسته برای افزودن تصاویر
+\usepackage{xepersian}       % بسته اصلی برای پارسی‌نویسی
+\usepackage{geometry}        % برای تنظیم حاشیه‌ها
+\usepackage{setspace}        % برای تنظیم فاصله خطوط
+\usepackage{framed}          % بسته برای ایجاد کادر دور متن
+\usepackage{amsthm}          % بسته برای محیط اثبات
+
+% تنظیم حاشیه‌های صفحه
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+% تنظیم فونت‌های نوشتاری و ریاضی
+% توجه: این فونت‌ها باید روی سیستم شما نصب باشند
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+\setmathdigitfont{XB Niloofar}
+
+% فارسی‌سازی نام محیط اثبات
+\renewcommand{\proofname}{اثبات}
+
+\begin{document}
+	
+	% فرض می‌شود این کد در ادامه فصل اول قرار می‌گیرد
+	 \chapter{مقدمه‌ای بر بردارها}
+	 \section{بردارها و ترکیب‌های خطی}
+	% ... متن بخش ۱.۱ ...
+	
+	% اعمال فاصله 1.5 بین خطوط برای خوانایی بهتر
+	\onehalfspacing
+	
+	\section{طول‌ها و ضرب‌های داخلی}
+	
+	بخش اول از ضرب کردن بردارها عقب‌نشینی کرد. اکنون ما برای تعریف \textbf{«ضرب داخلی»} $\mathbf{v}$ و $\mathbf{w}$ به پیش می‌رویم. این ضرب شامل حاصل‌ضرب‌های جداگانه $v_1w_1$ و $v_2w_2$ است، اما به همین جا ختم نمی‌شود. آن دو عدد با هم جمع می‌شوند تا یک عدد واحد $\mathbf{v} \cdot \mathbf{w}$ را تولید کنند. این بخش، بخش هندسه است (طول بردارها و کسینوس زوایای بین آن‌ها).
+	
+	\begin{framed}
+		\textbf{تعریف:} ضرب داخلی یا \textit{inner product} برای بردارهای $\mathbf{v}=(v_1, v_2)$ و $\mathbf{w}=(w_1, w_2)$ عدد $\mathbf{v} \cdot \mathbf{w}$ است:
+		\[ \mathbf{v} \cdot \mathbf{w} = v_1w_1 + v_2w_2 \]
+	\end{framed}
+	
+	\vspace{5mm}
+	\textit{\textbf{(توضیح مترجم: معنای ضرب داخلی چیست؟)} \\
+		ضرب داخلی یک عدد است که میزان هم‌جهت بودن دو بردار را نشان می‌دهد.
+		\begin{itemize}
+			\item اگر $\mathbf{v} \cdot \mathbf{w} > 0$ (مثبت)، زاویه بین دو بردار تند (کمتر از ۹۰ درجه) است. یعنی بردارها کم و بیش در یک جهت هستند.
+			\item اگر $\mathbf{v} \cdot \mathbf{w} < 0$ (منفی)، زاویه بین دو بردار باز (بیشتر از ۹۰ درجه) است. یعنی بردارها در جهت‌های مخالف هم قرار دارند.
+			\item اگر $\mathbf{v} \cdot \mathbf{w} = 0$ (صفر)، دو بردار دقیقاً بر هم عمود هستند. آن‌ها هیچ اشتراکی در جهت ندارند.
+		\end{itemize}
+		این عدد همچنین در محاسبه «تصویر» یک بردار بر روی دیگری نقش اساسی دارد.}
+	\vspace{5mm}
+	
+	\subsection*{طول‌ها و بردارهای یکه}
+	یک حالت مهم، ضرب داخلی یک بردار در خودش است. در این حالت $\mathbf{v}$ برابر با $\mathbf{w}$ است. وقتی بردار $\mathbf{v}=(1,2,3)$ باشد، ضرب داخلی آن با خودش برابر است با $\mathbf{v} \cdot \mathbf{v} = ||\mathbf{v}||^2 = 14$. ضرب داخلی $\mathbf{v} \cdot \mathbf{v}$ مجذور طول $\mathbf{v}$ را می‌دهد.
+	
+	\begin{framed}
+		\textbf{تعریف:} طول $||\mathbf{v}||$ یک بردار $\mathbf{v}$، جذر $\mathbf{v} \cdot \mathbf{v}$ است:
+		\[ \text{طول} = ||\mathbf{v}|| = \sqrt{\mathbf{v} \cdot \mathbf{v}} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2} \]
+	\end{framed}
+	
+	در دو بعد، طول برابر با $\sqrt{v_1^2 + v_2^2}$ است. این همان فرمول قضیه فیثاغورس است. برای محاسبه طول $\mathbf{v}=(1,2,3)$ ما از قضیه فیثاغورس دو بار استفاده می‌کنیم. بردار پایه $(1,2,0)$ طولی برابر $\sqrt{5}$ دارد. این بردار پایه بر بردار $(0,0,3)$ که مستقیم به بالا می‌رود، عمود است. بنابراین قطر جعبه طولی برابر با $||\mathbf{v}||=\sqrt{(\sqrt{5})^2+3^2}=\sqrt{5+9}=\sqrt{14}$ دارد.
+	
+	\begin{figure}[h!]
+		\centering
+		\fbox{تصویر شکل ۱.۶ در اینجا قرار می‌گیرد}
+		\caption{طول $\sqrt{\mathbf{v}\cdot\mathbf{v}}$ برای بردارهای دو بعدی و سه بعدی.}
+	\end{figure}
+	
+	\vspace{5mm}
+	\textit{\textbf{(توضیح مترجم: بردار یکه چیست و چرا مهم است؟)} \\
+		کلمه «یکه» یا «واحد» (unit) همیشه به این معنی است که یک اندازه‌گیری برابر با «یک» است. یک \textbf{بردار یکه}، برداری است که طول آن دقیقاً برابر با ۱ است. \\
+		بردارهای یکه بسیار مهم هستند زیرا \textbf{فقط جهت} را نشان می‌دهند و اثر طول در آن‌ها حذف شده است. برای یافتن بردار یکه در جهت هر بردار غیرصفر $\mathbf{v}$، کافی است $\mathbf{v}$ را بر طولش $||\mathbf{v}||$ تقسیم کنیم. این فرآیند \textbf{نرمال‌سازی} نامیده می‌شود.
+		\[ \mathbf{u} = \frac{\mathbf{v}}{||\mathbf{v}||} \quad (\text{بردار یکه در جهت } \mathbf{v}) \]
+	}
+	\vspace{5mm}
+	
+	\begin{framed}
+		\textbf{تعریف:} یک \textbf{بردار یکه} $\mathbf{u}$، برداری است که طول آن برابر با یک است. در نتیجه $\mathbf{u} \cdot \mathbf{u} = 1$.
+	\end{framed}
+	
+	بردارهای یکه استاندارد در امتداد محورهای x و y به صورت $\mathbf{i}$ و $\mathbf{j}$ نوشته می‌شوند. در صفحه xy، بردار یکه‌ای که زاویه $\theta$ با محور x می‌سازد، بردار $(\cos\theta, \sin\theta)$ است. این بردارها به دایره واحد اشاره دارند.
+	
+	\begin{figure}[h!]
+		\centering
+		\fbox{تصویر شکل ۱.۷ در اینجا قرار می‌گیرد}
+		\caption{بردارهای مختصات $\mathbf{i}$ و $\mathbf{j}$. بردار یکه $\mathbf{u}$ در زاویه ۴۵ درجه (چپ) از تقسیم $\mathbf{v}=(1,1)$ بر طولش $||\mathbf{v}||=\sqrt{2}$ به دست می‌آید. بردار یکه $\mathbf{u}=(\cos\theta, \sin\theta)$ در زاویه $\theta$ قرار دارد.}
+	\end{figure}
+	
+	\subsection*{زاویه بین دو بردار}
+	ما بیان کردیم که بردارهای عمود بر هم $\mathbf{v} \cdot \mathbf{w} = 0$ دارند. برای توضیح این موضوع، باید زوایا را به ضرب‌های داخلی متصل کنیم.
+	\begin{proof}
+		وقتی $\mathbf{v}$ و $\mathbf{w}$ عمود بر هم هستند، دو ضلع یک مثلث قائم‌الزاویه را تشکیل می‌دهند. ضلع سوم (وتر) برابر با $\mathbf{v} - \mathbf{w}$ است. قانون فیثاغورس برای اضلاع یک مثلث قائم‌الزاویه $a^2 + b^2 = c^2$ است:
+		\[ ||\mathbf{v}||^2 + ||\mathbf{w}||^2 = ||\mathbf{v} - \mathbf{w}||^2 \]
+		\begin{figure}[h!]
+			\centering
+			\fbox{تصویر شکل ۱.۸ در اینجا قرار می‌گیرد}
+			\caption{بردارهای عمود بر هم دارای $\mathbf{v} \cdot \mathbf{w}=0$ هستند. در این حالت $ ||\mathbf{v}||^2 + ||\mathbf{w}||^2 = ||\mathbf{v}-\mathbf{w}||^2 $.}
+		\end{figure}
+		با نوشتن فرمول‌ها برای طول‌ها، این معادله به شکل زیر در می‌آید:
+		\[ (v_1^2 + v_2^2) + (w_1^2 + w_2^2) = (v_1 - w_1)^2 + (v_2 - w_2)^2 \]
+		\[ v_1^2 + v_2^2 + w_1^2 + w_2^2 = (v_1^2 - 2v_1w_1 + w_1^2) + (v_2^2 - 2v_2w_2 + w_2^2) \]
+		با حذف جملات مشابه از دو طرف، به دست می‌آوریم:
+		\[ 0 = -2v_1w_1 - 2v_2w_2 \quad \Rightarrow \quad v_1w_1 + v_2w_2 = 0 \quad \Rightarrow \quad \mathbf{v} \cdot \mathbf{w} = 0 \]
+	\end{proof}
+	اکنون فرض کنید $\mathbf{v} \cdot \mathbf{w}$ صفر نیست. علامت آن به ما می‌گوید که زاویه تند است یا باز.
+	\begin{itemize}
+		\item زاویه \textbf{کمتر از ۹۰ درجه} است وقتی $\mathbf{v} \cdot \mathbf{w}$ \textbf{مثبت} باشد.
+		\item زاویه \textbf{بیشتر از ۹۰ درجه} است وقتی $\mathbf{v} \cdot \mathbf{w}$ \textbf{منفی} باشد.
+	\end{itemize}
+	ضرب داخلی زاویه دقیق $\theta$ را آشکار می‌سازد. برای بردارهای یکه $\mathbf{u}$ و $\mathbf{U}$، ضرب داخلی آن‌ها دقیقاً برابر با کسینوس زاویه بینشان است: $\mathbf{u} \cdot \mathbf{U} = \cos\theta$.
+	
+	\begin{figure}[h!]
+		\centering
+		\fbox{تصویر شکل ۱.۹ در اینجا قرار می‌گیرد}
+		\caption{بردارهای یکه: $\mathbf{u} \cdot \mathbf{U}$ برابر با کسینوس $\theta$ (زاویه بین آن‌ها) است.}
+	\end{figure}
+	
+	اگر $\mathbf{v}$ و $\mathbf{w}$ بردارهای یکه نباشند، آن‌ها را بر طولشان تقسیم می‌کنیم تا به بردارهای یکه $\mathbf{u}=\frac{\mathbf{v}}{||\mathbf{v}||}$ و $\mathbf{U}=\frac{\mathbf{w}}{||\mathbf{w}||}$ برسیم. آنگاه ضرب داخلی این بردارهای یکه، $\cos\theta$ را به ما می‌دهد.
+	
+	\begin{framed}
+		\textbf{فرمول کسینوس:} اگر $\mathbf{v}$ و $\mathbf{w}$ بردارهای غیرصفر باشند، آنگاه:
+		\[ \cos\theta = \frac{\mathbf{v} \cdot \mathbf{w}}{||\mathbf{v}|| ||\mathbf{w}||} \]
+	\end{framed}
+	
+	از آنجایی که $|\cos\theta|$ هرگز از ۱ تجاوز نمی‌کند، فرمول کسینوس دو نامساوی بزرگ را به ما می‌دهد:
+	
+	\begin{framed}
+		\textbf{نامساوی کوشی-شوارتز:}
+		\[ |\mathbf{v} \cdot \mathbf{w}| \le ||\mathbf{v}|| ||\mathbf{w}|| \]
+		\textbf{نامساوی مثلث:}
+		\[ ||\mathbf{v} + \mathbf{w}|| \le ||\mathbf{v}|| + ||\mathbf{w}|| \]
+	\end{framed}
+	\textit{(توضیح مترجم: نامساوی کوشی-شوارتز به زبان ساده می‌گوید که میزان هم‌جهتی دو بردار (ضرب داخلی) نمی‌تواند از حاصلضرب طول‌های آن‌ها بیشتر باشد. نامساوی مثلث نیز بیان می‌کند که طول یک ضلع مثلث (ضلع $\mathbf{v}+\mathbf{w}$) نمی‌تواند از مجموع طول دو ضلع دیگر (ضلع‌های $\mathbf{v}$ و $\mathbf{w}$) بزرگتر باشد.)}
+	
+	\newpage
+	\subsection*{مروری بر ایده‌های کلیدی (بخش ۱.۲)}
+	\begin{enumerate}
+		\item ضرب داخلی $\mathbf{v} \cdot \mathbf{w}$ هر مؤلفه $v_i$ را در $w_i$ ضرب کرده و تمام $v_iw_i$ها را جمع می‌کند.
+		\item طول $||\mathbf{v}||$ جذر $\mathbf{v} \cdot \mathbf{v}$ است. آنگاه $\mathbf{u} = \mathbf{v} / ||\mathbf{v}||$ یک بردار یکه است با طول ۱.
+		\item وقتی بردارهای $\mathbf{v}$ و $\mathbf{w}$ بر هم عمود باشند، ضرب داخلی آن‌ها $\mathbf{v} \cdot \mathbf{w}=0$ است.
+		\item کسینوس زاویه $\theta$ (بین هر دو بردار غیرصفر $\mathbf{v}$ و $\mathbf{w}$) هرگز از ۱ تجاوز نمی‌کند:
+		\[ \text{کسینوس: } \cos\theta = \frac{\mathbf{v} \cdot \mathbf{w}}{||\mathbf{v}|| ||\mathbf{w}||} \quad \quad \text{نامساوی شوارتز: } |\mathbf{v} \cdot \mathbf{w}| \le ||\mathbf{v}|| ||\mathbf{w}|| \]
+	\end{enumerate}
+	
+	\subsection*{مثال‌های حل شده (بخش ۱.۲)}
+	\subsubsection*{مثال ۱.۲ الف}
+	برای بردارهای $\mathbf{v}=(3,4)$ و $\mathbf{w}=(4,3)$، نامساوی شوارتز را بر روی $\mathbf{v} \cdot \mathbf{w}$ و نامساوی مثلث را بر روی $||\mathbf{v}+\mathbf{w}||$ بیازمایید. $\cos\theta$ را برای زاویه بین $\mathbf{v}$ و $\mathbf{w}$ بیابید. چه زمانی در این نامساوی‌ها تساوی برقرار می‌شود؟
+	
+	\textbf{راه حل:}
+	ضرب داخلی $\mathbf{v} \cdot \mathbf{w} = (3)(4)+(4)(3)=24$ است. طول $\mathbf{v}$ برابر با $||\mathbf{v}||=\sqrt{9+16}=5$ و همچنین $||\mathbf{w}||=5$ است. جمع $\mathbf{v}+\mathbf{w}=(7,7)$ طولی برابر با $||\mathbf{v}+\mathbf{w}||=\sqrt{49+49}=\sqrt{98}=7\sqrt{2}$ دارد.
+	
+	نامساوی شوارتز: $|\mathbf{v} \cdot \mathbf{w}| \le ||\mathbf{v}|| ||\mathbf{w}|| \implies 24 < (5)(5) = 25$. (برقرار است) \\
+	نامساوی مثلث: $||\mathbf{v}+\mathbf{w}|| \le ||\mathbf{v}||+||\mathbf{w}|| \implies 7\sqrt{2} \le 5+5=10$. (برقرار است، زیرا $98 < 100$) \\
+	کسینوس زاویه: $\cos\theta = \frac{24}{25}$.
+	
+	\textbf{حالت تساوی:} تساوی زمانی رخ می‌دهد که یک بردار مضربی از دیگری باشد (مانند $\mathbf{w}=c\mathbf{v}$). در این حالت زاویه ۰ یا ۱۸۰ درجه است و $|\cos\theta|=1$.
+	
+	\subsection*{مجموعه مسائل ۱.۲}
+	
+	\begin{enumerate}
+		\item ضرب‌های داخلی $\mathbf{u}\cdot\mathbf{v}$ و $\mathbf{u}\cdot\mathbf{w}$ و $\mathbf{u}\cdot(\mathbf{v}+\mathbf{w})$ و $\mathbf{w}\cdot\mathbf{v}$ را محاسبه کنید:
+		\[ \mathbf{u} = \begin{bmatrix} -0.6 \\ 0.8 \end{bmatrix} \quad \mathbf{v} = \begin{bmatrix} 4 \\ 3 \end{bmatrix} \quad \mathbf{w} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \]
+		\item طول‌های $||\mathbf{u}||$ و $||\mathbf{v}||$ و $||\mathbf{w}||$ را برای بردارهای بالا محاسبه کنید. نامساوی‌های شوارتز $| \mathbf{u}\cdot\mathbf{v} | \le ||\mathbf{u}|| ||\mathbf{v}||$ و $| \mathbf{v}\cdot\mathbf{w} | \le ||\mathbf{v}|| ||\mathbf{w}||$ را بررسی کنید.
+		\item بردارهای یکه در جهت $\mathbf{v}$ و $\mathbf{w}$ در مسئله ۱، و کسینوس زاویه $\theta$ بین آن‌ها را بیابید. بردارهای a, b, c را انتخاب کنید که زوایای ۰، ۹۰ و ۱۸۰ درجه با $\mathbf{w}$ بسازند.
+		\item برای هر دو بردار یکه $\mathbf{v}$ و $\mathbf{w}$، ضرب‌های داخلی زیر را بیابید (اعداد واقعی):
+		(الف) $(\mathbf{v}+\mathbf{w}) \cdot (\mathbf{v}-\mathbf{w})$ \quad (ب) $(\mathbf{v}-2\mathbf{w}) \cdot (\mathbf{v}+2\mathbf{w})$
+		\item بردارهای یکه $\mathbf{u}_1$ و $\mathbf{u}_2$ را در جهت $\mathbf{v}=(1,3)$ و $\mathbf{w}=(2,1,2)$ بیابید. بردارهای یکه $\mathbf{U}_1$ و $\mathbf{U}_2$ را بیابید که به ترتیب بر $\mathbf{u}_1$ و $\mathbf{u}_2$ عمود باشند.
+		\item (الف) هر بردار $\mathbf{w}=(w_1, w_2)$ را که بر $\mathbf{v}=(2,-1)$ عمود است، توصیف کنید.
+		(ب) تمام بردارهایی که بر $\mathbf{V}=(1,1,1)$ عمود هستند، بر روی یک \textbf{صفحه} در فضای سه بعدی قرار دارند.
+		(ج) بردارهایی که هم بر $(1,1,1)$ و هم بر $(1,2,3)$ عمود هستند، بر روی یک \textbf{خط} قرار دارند.
+		\item زاویه $\theta$ (از روی کسینوس آن) را بین این زوج بردارها بیابید:
+		(الف) $\mathbf{v}=\begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}, \mathbf{w}=\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ \quad (ب) $\mathbf{v}=\begin{bmatrix} 2 \\ 2 \\ -1 \end{bmatrix}, \mathbf{w}=\begin{bmatrix} 2 \\ -1 \\ 2 \end{bmatrix}$
+		
+		(ج) $\mathbf{v}=\begin{bmatrix} 1 \\ \sqrt{3} \end{bmatrix}, \mathbf{w}=\begin{bmatrix} -1 \\ \sqrt{3} \end{bmatrix}$ \quad (د) $\mathbf{v}=\begin{bmatrix} 3 \\ 1 \end{bmatrix}, \mathbf{w}=\begin{bmatrix} -1 \\ -2 \end{bmatrix}$
+		\item درست یا غلط (اگر درست است دلیل بیاورید و اگر غلط است مثال نقض بیابید):
+		(الف) اگر $\mathbf{u}=(1,1,1)$ بر $\mathbf{v}$ و $\mathbf{w}$ عمود باشد، آنگاه $\mathbf{v}$ با $\mathbf{w}$ موازی است.
+		(ب) اگر $\mathbf{u}$ بر $\mathbf{v}$ و $\mathbf{w}$ عمود باشد، آنگاه $\mathbf{u}$ بر $\mathbf{v}+2\mathbf{w}$ عمود است.
+		(ج) اگر $\mathbf{u}$ و $\mathbf{v}$ بردارهای یکه عمود بر هم باشند، آنگاه $||\mathbf{u}-\mathbf{v}||=\sqrt{2}$.
+		\item شیب‌های پیکان‌ها از $(0,0)$ به $(v_1, v_2)$ و $(w_1, w_2)$ به ترتیب $v_2/v_1$ و $w_2/w_1$ هستند. فرض کنید حاصلضرب این شیب‌ها، یعنی $(v_2w_2)/(v_1w_1)$، برابر با ۱- باشد. نشان دهید که $\mathbf{v}\cdot\mathbf{w}=0$ و بردارها بر هم عمودند.
+		\item پیکان‌هایی از مبدأ (0,0) به نقاط $\mathbf{v}=(1,2)$ و $\mathbf{w}=(-2,1)$ رسم کنید. شیب‌های آن‌ها را در هم ضرب کنید. این پاسخ، سیگنالی است که نشان می‌دهد $\mathbf{v} \cdot \mathbf{w} = 0$ و این پیکان‌ها بر هم \_\_\_ هستند.
+		\item اگر $\mathbf{v}\cdot\mathbf{w}$ منفی باشد، این در مورد زاویه بین $\mathbf{v}$ و $\mathbf{w}$ چه می‌گوید؟ یک بردار سه بعدی $\mathbf{v}$ رسم کنید و نشان دهید تمام $\mathbf{w}$هایی که $\mathbf{v}\cdot\mathbf{w}<0$ دارند، کجا یافت می‌شوند.
+		\item با $\mathbf{v}=(1,1)$ و $\mathbf{w}=(1,5)$، عدد $c$ را طوری انتخاب کنید که $\mathbf{w}-c\mathbf{v}$ بر $\mathbf{v}$ عمود باشد. سپس فرمول $c$ را برای هر دو بردار غیرصفر $\mathbf{v}$ و $\mathbf{w}$ پیدا کنید.
+		\item بردارهای غیرصفر $\mathbf{v}$ و $\mathbf{w}$ را بیابید که بر $(1,0,1)$ و بر یکدیگر عمود باشند.
+		\item بردارهای ناصفر $\mathbf{u}, \mathbf{v}, \mathbf{w}$ را بیابید که بر بردار $(1, 1, 1, 1)$ و بر یکدیگر عمود باشند.
+		\item میانگین هندسی $x=2$ و $y=8$ برابر با $\sqrt{xy}=4$ است. میانگین حسابی بزرگتر است: $\frac{1}{2}(x+y)=5$. این از نامساوی شوارتز برای $\mathbf{v}=(\sqrt{2}, \sqrt{8})$ و $\mathbf{w}=(\sqrt{8}, \sqrt{2})$ به دست می‌آید. $\cos\theta$ را برای این $\mathbf{v}$ و $\mathbf{w}$ بیابید.
+		\item طول بردار $\mathbf{v}=(1,1,\dots,1)$ در ۹ بعد چقدر است؟ یک بردار یکه $\mathbf{u}$ در همان جهت $\mathbf{v}$ و یک بردار یکه $\mathbf{w}$ که بر $\mathbf{v}$ عمود باشد، بیابید.
+		\item کسینوس‌های زوایای $\alpha, \beta, \gamma$ بین بردار $(1,0,-1)$ و بردارهای یکه $\mathbf{i, j, k}$ در امتداد محورها چیست؟ فرمول $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$ را بررسی کنید.
+		
+		\subsection*{مسائل ۱۸-۳۳ به حقایق اصلی در مورد طول‌ها و زوایا در مثلث‌ها می‌پردازند.}
+		
+		\item متوازی‌الاضلاع با اضلاع $\mathbf{v}=(4,2)$ و $\mathbf{w}=(-1,2)$ یک مستطیل است. فرمول فیثاغورس $a^2+b^2=c^2$ را که فقط برای مثلث‌های قائم‌الزاویه است، بررسی کنید: $(\text{طول } \mathbf{v})^2 + (\text{طول } \mathbf{w})^2 = (\text{طول } \mathbf{v}+\mathbf{w})^2$.
+		\item (قواعد ضرب داخلی) این معادلات ساده اما مفید هستند: (۱) $\mathbf{v}\cdot\mathbf{w}=\mathbf{w}\cdot\mathbf{v}$ (۲) $\mathbf{u}\cdot(\mathbf{v}+\mathbf{w}) = \mathbf{u}\cdot\mathbf{v}+\mathbf{u}\cdot\mathbf{w}$ (۳) $(c\mathbf{v})\cdot\mathbf{w} = c(\mathbf{v}\cdot\mathbf{w})$. از قاعده (۲) با $\mathbf{u}=\mathbf{v}+\mathbf{w}$ استفاده کنید تا اثبات کنید $||\mathbf{v}+\mathbf{w}||^2 = \mathbf{v}\cdot\mathbf{v} + 2\mathbf{v}\cdot\mathbf{w} + \mathbf{w}\cdot\mathbf{w}$.
+		\item «قانون کسینوس‌ها» از رابطه $(\mathbf{v}-\mathbf{w})\cdot(\mathbf{v}-\mathbf{w}) = \mathbf{v}\cdot\mathbf{v}-2\mathbf{v}\cdot\mathbf{w}+\mathbf{w}\cdot\mathbf{w}$ به دست می‌آید:
+		\[ ||\mathbf{v}-\mathbf{w}||^2 = ||\mathbf{v}||^2 - 2||\mathbf{v}||||\mathbf{w}||\cos\theta + ||\mathbf{w}||^2 \]
+		یک مثلث با اضلاع $\mathbf{v}$، $\mathbf{w}$ و $\mathbf{v}-\mathbf{w}$ رسم کنید. کدام یک از زوایا $\theta$ است؟
+		\item نامساوی مثلث می‌گوید: $(\text{طول } \mathbf{v}+\mathbf{w}) \le (\text{طول } \mathbf{v}) + (\text{طول } \mathbf{w})$. مسئله ۱۹ نشان داد $||\mathbf{v}+\mathbf{w}||^2 = ||\mathbf{v}||^2 + 2\mathbf{v}\cdot\mathbf{w} + ||\mathbf{w}||^2$. مقدار $\mathbf{v}\cdot\mathbf{w}$ را به $||\mathbf{v}||||\mathbf{w}||$ (بزرگترین مقدار ممکنش طبق نامساوی شوارتز) افزایش دهید تا نشان دهید طول ضلع سوم نمی‌تواند از مجموع طول دو ضلع دیگر بیشتر باشد:
+		\[ ||\mathbf{v}+\mathbf{w}||^2 \le (||\mathbf{v}||+||\mathbf{w}||)^2 \quad \text{یا} \quad ||\mathbf{v}+\mathbf{w}|| \le ||\mathbf{v}||+||\mathbf{w}|| \]
+		\item اثبات جبری نامساوی شوارتز $|\mathbf{v}\cdot\mathbf{w}| \le ||\mathbf{v}||||\mathbf{w}||$ به جای روش مثلثاتی:
+		(الف) هر دو طرف نامساوی $(v_1w_1+v_2w_2)^2 \le (v_1^2+v_2^2)(w_1^2+w_2^2)$ را باز کنید.
+		(ب) نشان دهید که تفاضل بین دو طرف برابر با $(v_1w_2 - v_2w_1)^2$ است. این عبارت نمی‌تواند منفی باشد زیرا یک مجذور کامل است - بنابراین نامساوی درست است.
+		\item شکل نشان می‌دهد که $\cos\alpha = v_1/||\mathbf{v}||$ و $\sin\alpha = v_2/||\mathbf{v}||$. به طور مشابه $\cos\beta$ برابر با \_\_\_ و $\sin\beta$ برابر با \_\_\_ است. زاویه $\theta$ برابر با $\beta-\alpha$ است. این مقادیر را در فرمول مثلثاتی $\cos(\beta-\alpha)=\cos\beta\cos\alpha+\sin\beta\sin\alpha$ جایگذاری کنید تا به دست آورید $\cos\theta = \mathbf{v}\cdot\mathbf{w} / (||\mathbf{v}||||\mathbf{w}||)$.
+		\item اثبات یک خطی نامساوی $|\mathbf{u}\cdot\mathbf{U}| \le 1$ برای بردارهای یکه $(u_1, u_2)$ و $(U_1, U_2)$:
+		\[ |\mathbf{u}\cdot\mathbf{U}| \le |u_1||U_1| + |u_2||U_2| \le \frac{u_1^2+U_1^2}{2} + \frac{u_2^2+U_2^2}{2} = \frac{u_1^2+u_2^2}{2} + \frac{U_1^2+U_2^2}{2} = \frac{1}{2}+\frac{1}{2}=1 \]
+		\item مقادیر $(u_1,u_2) = (0.6, 0.8)$ و $(U_1, U_2) = (0.8, 0.6)$ را در تمام خط بالا قرار دهید و $\cos\theta$ را بیابید. چرا در وهله اول $|\cos\theta|$ هرگز از ۱ بزرگتر نیست؟
+		\item  (توضیه شده) یک متوازی الاضلاع رسم کنید
+		
+		\item  با توحه به سوالات بالا(متوازی الاضلاع)  نشان دهید که مجموع مجذورهای طول قطرهایش $||\mathbf{v}+\mathbf{w}||^2 + ||\mathbf{v}-\mathbf{w}||^2$، برابر با مجموع مجذورهای طول چهار ضلع آن، $2||\mathbf{v}||^2+2||\mathbf{w}||^2$، است (قانون متوازی‌الاضلاع).
+		
+	
+		\item اگر $\mathbf{v}=(1,2)$ است، تمام بردارهای $\mathbf{w}=(x,y)$ را در صفحه $xy$ رسم کنید که در شرط $\mathbf{v}\cdot\mathbf{w}=x+2y=5$ صدق می‌کنند. چرا این $\mathbf{w}$ها بر روی یک خط قرار می‌گیرند؟ کوتاه‌ترین $\mathbf{w}$ کدام است؟
+		\item (توصیه شده) اگر $||\mathbf{v}||=5$ و $||\mathbf{w}||=3$، کمترین و بیشترین مقادیر ممکن برای $||\mathbf{v}-\mathbf{w}||$ چیست؟ کمترین و بیشترین مقادیر ممکن برای $\mathbf{v}\cdot\mathbf{w}$ چیست؟
+		
+		\subsection*{مسائل چالشی}
+		\item آیا سه بردار در صفحه $xy$ می‌توانند شرایط $\mathbf{u}\cdot\mathbf{v}<0$ و $\mathbf{v}\cdot\mathbf{w}<0$ و $\mathbf{u}\cdot\mathbf{w}<0$ را داشته باشند؟
+		\item اعدادی دلخواه انتخاب کنید که مجموعشان $x+y+z=0$ باشد. زاویه بین بردار $\mathbf{v}=(x,y,z)$ و بردار $\mathbf{w}=(z,x,y)$ را بیابید. سوال چالشی: توضیح دهید چرا $\mathbf{v}\cdot\mathbf{w}/(||\mathbf{v}||||\mathbf{w}||)$ همیشه برابر با $-1/2$ است.
+		\item چگونه می‌توانید نامساوی $\sqrt[3]{xyz} \le \frac{x+y+z}{3}$ (میانگین هندسی $\le$ میانگین حسابی) را اثبات کنید؟
+		\item ۴ بردار یکه عمود بر هم به شکل $(\pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2})$ بیابید: علامت + یا - را انتخاب کنید.
+		\item با استفاده از \lr{`v = randn(3, 1)`} در متلب، یک بردار یکه تصادفی \lr{`u = v/norm(v)`} بسازید. با استفاده از \lr{`V = randn(3, 30)`}، سی بردار یکه تصادفی دیگر $U_j$ بسازید. اندازه میانگین ضرب‌های داخلی $|\mathbf{u}\cdot\mathbf{U}_j|$ چقدر است؟ در حسابان، این میانگین برابر است با $\int_0^\pi |\cos\theta|d\theta / \pi = 2/\pi$.
+	\end{enumerate}
+	
+\end{document}
